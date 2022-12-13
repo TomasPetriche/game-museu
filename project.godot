@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "PlayerMovement",
 "language": "GDScript",
 "path": "res://scenes/game/player/player_movement.gd"
+}, {
+"base": "Node",
+"class": "TileMapFiller",
+"language": "GDScript",
+"path": "res://scenes/tools/tile_map_filler.gd"
 } ]
 _global_script_class_icons={
 "PlayerAnimation": "",
 "PlayerController": "",
-"PlayerMovement": ""
+"PlayerMovement": "",
+"TileMapFiller": ""
 }
 
 [application]
