@@ -7,6 +7,7 @@ Snap Movement using Tweens
 
 """
 
+signal moved
 signal movement_changed (move_direction)
 
 export (Vector2) var move_tile_size = Vector2(64, 32)
@@ -56,6 +57,7 @@ func _process_snap_movement():
 			init_position, final_position, 
 			move_time)
 	tween.start()
+	emit_signal("moved")
 	emit_signal("movement_changed", iso_direction)
 	self.is_moving = true
 	pass
