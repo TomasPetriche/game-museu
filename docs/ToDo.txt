@@ -1,8 +1,24 @@
 
 #ToDo
-Fazer revisão com Petri
+- Realizar Protótipo
+	- Player
+		- Controle
+		- Movimento
+		- Animação
+		- Som
+		- Colisão
+	- Game Manager
+		- Trocar de cena
+		- Tocar Musica
+		- Iniciar Nivel
+	- Inimigos
+		- Movimento
+		- Colisão e Interação
+	- Itens Coletaveis
+		- Emitir sinais
 
 #Completed
+- Fazer revisão com Petri
 
 
 #Hold
