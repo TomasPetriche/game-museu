@@ -2,10 +2,6 @@
 #ToDo
 - Realizar Protótipo
 	- Player
-		- Controle
-		- Movimento
-		- Animação
-		- Som
 		- Colisão
 	- Game Manager
 		- Trocar de cena
@@ -20,6 +16,12 @@
 #Completed
 - Fazer revisão com Petri
 - Criar branch petriche
+
+- Player
+	- Controle
+	- Movimento
+	- Animação
+	- Som
 
 
 #Hold
