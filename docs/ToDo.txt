@@ -19,6 +19,7 @@
 
 #Completed
 - Fazer revisão com Petri
+- Criar branch petriche
 
 
 #Hold
