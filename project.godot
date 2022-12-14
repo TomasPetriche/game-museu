@@ -40,7 +40,7 @@ _global_script_class_icons={
 
 config/name="Prototipo Jogo Museu"
 run/main_scene="res://scenes/world_test.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/visuals/icon.png"
 
 [gui]
 
