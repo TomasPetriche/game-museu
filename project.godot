@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "AnimationPlayer",
 "class": "PlayerAnimation",
 "language": "GDScript",
-"path": "res://scenes/game/player/PlayerAnimation.gd"
+"path": "res://scenes/game/player/player_animation.gd"
 }, {
 "base": "Node",
 "class": "PlayerController",
