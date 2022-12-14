@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://resources/tilesets/tile_set_ph0.tres" type="TileSet" id=1]
+[ext_resource path="res://resources/tilesets/tile_set_floor_ph0.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/tools/tile_map_filler.gd" type="Script" id=2]
 
 [node name="FloorTileMap" type="TileMap"]

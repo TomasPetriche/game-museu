@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/game/player/player_audio.gd" type="Script" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 24.0
+radius = 20.0
 
 [sub_resource type="Animation" id=2]
 length = 0.001
