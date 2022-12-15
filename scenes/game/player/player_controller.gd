@@ -33,4 +33,5 @@ func _process(_delta):
 	var interact_input = Input.is_action_just_pressed("gp_interact")
 	if interact_input:
 		emit_signal("just_interacted")
+	print("!")
 	pass

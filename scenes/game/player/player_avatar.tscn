@@ -200,6 +200,7 @@ tracks/1/keys = {
 }
 
 [node name="PlayerAvatar" type="KinematicBody2D"]
+motion/sync_to_physics = true
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
