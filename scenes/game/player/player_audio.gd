@@ -1,9 +1,11 @@
 extends AudioStreamPlayer
 class_name PlayerAudio
 
+export (AudioStreamSample) var hit_sample : AudioStreamSample
 export (AudioStreamSample) var walk_sample : AudioStreamSample
 
 const WALK_SFX := "walk_sfx"
+const HIT_SFX := "hit_sfx"
 
 #Sound Control
 var current_sfx := ""
@@ -23,6 +25,11 @@ func play_sfx( sfx_name : String, volume : float = 0.0, override : bool = false)
 		WALK_SFX:
 			stream = walk_sample
 			pitch_scale = 2.0
+		
+		HIT_SFX:
+			stream = hit_sample
+			pitch_scale = 0.5
+		
 		var unrelated_name:
 			print(unrelated_name, " is not a valid name")
 			return

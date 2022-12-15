@@ -238,9 +238,12 @@ script = ExtResource( 5 )
 
 [node name="PlayerAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+pitch_scale = 0.5
 script = ExtResource( 7 )
+hit_sample = ExtResource( 6 )
 walk_sample = ExtResource( 6 )
 
 [connection signal="movement_changed" from="PlayerController" to="PlayerMovement" method="update_movement_direction"]
+[connection signal="hit" from="PlayerMovement" to="PlayerAudio" method="play_sfx" binds= [ "hit_sfx" ]]
 [connection signal="moved" from="PlayerMovement" to="PlayerAudio" method="play_sfx" binds= [ "walk_sfx", -16.0, true ]]
 [connection signal="movement_changed" from="PlayerMovement" to="PlayerAnimation" method="_set_iso_movement_animation"]

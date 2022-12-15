@@ -7,6 +7,7 @@ Snap Movement using Tweens
 
 """
 
+signal hit
 signal moved
 signal movement_changed (move_direction)
 
@@ -14,9 +15,10 @@ export (Vector2) var move_tile_size = Vector2(64, 32)
 export (float) var move_time : float = .5
 
 var is_moving : bool = false 
-var _linear_velocity : Vector2 = Vector2()
+var go_back_movement: bool = false
+var _previous_velocity : Vector2 = Vector2()
 var _current_direction : Vector2 = Vector2()
-onready var _main_body := get_parent() as KinematicBody2D
+onready var _main_body : KinematicBody2D = get_parent() as KinematicBody2D
 
 
 
@@ -25,7 +27,7 @@ func _ready():
 	pass
 
 func _physics_process(_delta):
-	if not self.is_moving and _current_direction != Vector2():
+	if not is_moving and _current_direction != Vector2():
 		_process_snap_movement()
 	pass
 
@@ -50,20 +52,45 @@ func _process_snap_movement():
 	var tween = $MoveTween
 	var init_position = _main_body.global_position
 	var iso_direction =  card2iso(_current_direction)
-
-
-	var final_position = init_position + (iso_direction * move_tile_size)
-	tween.interpolate_property(_main_body, "global_position",
-			init_position, final_position, 
-			move_time)
-	tween.start()
-	emit_signal("moved")
-	emit_signal("movement_changed", iso_direction)
-	self.is_moving = true
+	var velocity = (iso_direction * move_tile_size)
+	
+	# If does't collides with wall
+	if !_main_body.test_move(_main_body.transform, velocity):
+		var final_position = init_position + velocity
+		tween.interpolate_property(_main_body, "global_position",
+				init_position, final_position, 
+				move_time)
+		tween.start()
+		is_moving = true
+		emit_signal("moved")
+		emit_signal("movement_changed", iso_direction)
+	# If collide with wall
+	else:
+		velocity = velocity/2.0
+		var final_position = init_position + (velocity)
+		tween.interpolate_property(_main_body, "global_position",
+				init_position, final_position,
+				move_time/2.0)
+		tween.start()
+		_previous_velocity = velocity
+		go_back_movement = true
+		is_moving = true
+		emit_signal("hit")
+		emit_signal("movement_changed", iso_direction)
 	pass
 
 func _process_tween_end(_object : Object, key : NodePath):
 	if key == (":global_position"):
-		emit_signal("movement_changed", Vector2.ZERO)
-		self.is_moving = false
+		if go_back_movement:
+			go_back_movement = false
+			var tween = $MoveTween
+			var init_position = _main_body.global_position
+			var final_position = init_position - _previous_velocity
+			tween.interpolate_property(_main_body, "global_position",
+				init_position, final_position,
+				move_time/2.0)
+			tween.start()
+		else:
+			emit_signal("movement_changed", Vector2.ZERO)
+			is_moving = false
 	pass
