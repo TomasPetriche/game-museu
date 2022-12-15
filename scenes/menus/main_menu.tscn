@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/menus/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://scenes/menus/credits_rich_label.gd" type="Script" id=3]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" groups=["FreeOnChangeScene"]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -225,5 +225,7 @@ text = "CANCELAR"
 [connection signal="mouse_entered" from="MarginContainer/Buttons/QuitButton" to="MarginContainer/Buttons/QuitButton" method="grab_focus"]
 [connection signal="pressed" from="MarginContainer/Buttons/QuitButton" to="QuitPopup" method="popup_centered"]
 [connection signal="pressed" from="CreditsPopUp/MarginContainer/BackButton" to="CreditsPopUp" method="hide"]
+[connection signal="mouse_entered" from="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/QuitButton" to="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/QuitButton" method="grab_focus"]
 [connection signal="pressed" from="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/QuitButton" to="." method="_quit"]
+[connection signal="mouse_entered" from="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/CancelButton" to="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/CancelButton" method="grab_focus"]
 [connection signal="pressed" from="QuitPopup/CenterContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/CancelButton" to="QuitPopup" method="hide"]

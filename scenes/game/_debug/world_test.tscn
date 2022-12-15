@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=3]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.tscn" type="PackedScene" id=4]
 
-[node name="WorldTest" type="Node2D"]
+[node name="WorldTest" type="Node2D" groups=["FreeOnChangeScene"]]
 __meta__ = {
 "_edit_lock_": true
 }
