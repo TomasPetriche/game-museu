@@ -1,17 +1,20 @@
 
 #ToDo
 - Realizar Protótipo
-	- Player
-		- Colisão
-	- Game Manager
+
+	- Main
 		- Trocar de cena
 		- Tocar Musica
 		- Iniciar Nivel
+
 	- Inimigos
 		- Movimento
 		- Colisão e Interação
-	- Itens Coletaveis
-		- Emitir sinais
+
+	- LevelManager
+		- Winnig consitions
+		- Next Level
+
 
 #Completed
 - Fazer revisão com Petri
@@ -22,7 +25,10 @@
 	- Movimento
 	- Animação
 	- Som
+	- Colisão
 
+- Itens Coletaveis
+	- Emitir sinais
 
 #Hold
 
