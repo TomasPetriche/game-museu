@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "ArtefactPickUp",
+"language": "GDScript",
+"path": "res://scenes/game/artefact/artefact_pick_up.gd"
+}, {
 "base": "AnimationPlayer",
 "class": "PlayerAnimation",
 "language": "GDScript",
@@ -33,13 +38,20 @@ _global_script_classes=[ {
 "class": "TileMapFiller",
 "language": "GDScript",
 "path": "res://scenes/tools/tile_map_filler.gd"
+}, {
+"base": "Tween",
+"class": "UpDownTween",
+"language": "GDScript",
+"path": "res://scenes/game/tweens/up_down_tween.gd"
 } ]
 _global_script_class_icons={
+"ArtefactPickUp": "",
 "PlayerAnimation": "",
 "PlayerAudio": "",
 "PlayerController": "",
 "PlayerMovement": "",
-"TileMapFiller": ""
+"TileMapFiller": "",
+"UpDownTween": ""
 }
 
 [application]
