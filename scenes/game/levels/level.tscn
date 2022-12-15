@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
-[ext_resource path="res://assets/visuals/creature-sheet.png" type="Texture" id=3]
+[ext_resource path="res://scenes/game/player_spawn/player_spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/game/player/player_avatar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=6]
 
 [node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 2 )
@@ -17,23 +15,8 @@ __meta__ = {
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="PlayerSpawn" type="Position2D" parent="YSort"]
-position = Vector2( 224, 144 )
-
-[node name="PlayerSprite" type="Sprite" parent="YSort/PlayerSpawn"]
-scale = Vector2( 4, 4 )
-texture = ExtResource( 3 )
-offset = Vector2( 0, -12 )
-hframes = 4
-vframes = 2
-
-[node name="ShadowSprite" type="Sprite" parent="YSort/PlayerSpawn"]
-z_index = -1
-texture = ExtResource( 6 )
-
-[node name="PlayerAvatar" parent="YSort" instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 224, 144 )
+[node name="PlayerSpawn" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 736, 272 )
 
 [node name="WallTileMap" type="TileMap" parent="YSort"]
 position = Vector2( -32, -16 )

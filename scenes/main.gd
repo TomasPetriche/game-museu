@@ -34,7 +34,7 @@ func go_to_scene(scene_id : String):
 		print("\"%s\" does not exist in scenes dictionary.")
 	pass
 
-func restart_current_scene():
+func restart_scene():
 	get_tree().call_group("FreeOnChangeScene", "queue_free")
 	var new_instance := scenes[_current_scene] as Node
 	add_child(new_instance)
