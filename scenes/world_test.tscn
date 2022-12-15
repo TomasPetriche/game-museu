@@ -9,12 +9,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PlayerAvatar" parent="." instance=ExtResource( 1 )]
-position = Vector2( 224, 144 )
-
 [node name="FloorTileMap" parent="." instance=ExtResource( 2 )]
 
-[node name="WallTileMap" type="TileMap" parent="."]
+[node name="YSort" type="YSort" parent="."]
+
+[node name="PlayerAvatar" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 400 )
+
+[node name="WallTileMap" type="TileMap" parent="YSort"]
 position = Vector2( -32, -16 )
 z_index = -10
 z_as_relative = false
@@ -25,6 +27,5 @@ cell_tile_origin = 1
 cell_y_sort = true
 show_collision = true
 centered_textures = true
-collision_use_kinematic = true
 format = 1
-tile_data = PoolIntArray( -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, 65546, 0, 0, 131082, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0 )
+tile_data = PoolIntArray( -196602, 0, 0, -196600, 0, 0, -196599, 0, 0, -131062, 0, 0, -65526, 0, 0, -65525, 0, 0, 5, 0, 0, 6, 0, 0, 8, 0, 0, 9, 0, 0, 11, 0, 0, 65547, 0, 0, 65548, 0, 0, 131084, 0, 0, 196620, 0, 0 )
