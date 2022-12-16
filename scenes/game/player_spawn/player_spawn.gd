@@ -1,9 +1,21 @@
 extends Position2D
 class_name PlayerSpawn
 
+"""
+One Shot Player Spawn
+"""
+
 signal player_ready
 
 export (PackedScene) var player_packed : PackedScene
+export (bool) var skip_animation
+
+func _ready():
+	if skip_animation:
+		call_deferred("_spawn_player")
+	else:
+		$AnimationPlayer.play("SpawnPlayer")
+	pass
 
 func _spawn_player():
 	if player_packed:
