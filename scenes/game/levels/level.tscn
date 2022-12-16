@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
 [ext_resource path="res://scenes/game/player_spawn/player_spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 2 )
@@ -31,3 +32,28 @@ cell_y_sort = true
 show_collision = true
 centered_textures = true
 format = 1
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="AllGameElements" type="Control" parent="HUD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/AllGameElements"]
+self_modulate = Color( 1, 1, 1, 0.705882 )
+anchor_right = 1.0
+margin_bottom = 53.0
+
+[node name="Label" type="Label" parent="HUD/AllGameElements/PanelContainer"]
+margin_left = 7.0
+margin_top = 19.0
+margin_right = 1017.0
+margin_bottom = 33.0
+text = "Artefatos Coletados : X / X"
+align = 1
+valign = 1
+
+[node name="DebugUIElements" parent="HUD" instance=ExtResource( 5 )]

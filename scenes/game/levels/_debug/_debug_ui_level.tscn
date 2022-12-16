@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.gd" type="Script" id=1]
+
+[node name="DebugUILevel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color( 0.41, 3.24, 2.69, 0.8 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -180.0
+margin_right = 160.0
+
+[node name="DebugLabel" type="Label" parent="PanelContainer"]
+self_modulate = Color( 0, 0, 0.160784, 1 )
+margin_left = 7.0
+margin_top = 83.0
+margin_right = 153.0
+margin_bottom = 97.0
