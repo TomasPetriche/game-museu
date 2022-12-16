@@ -17,6 +17,7 @@ __meta__ = {
 
 [node name="PlayerSpawn" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 736, 272 )
+skip_animation = true
 
 [node name="WallTileMap" type="TileMap" parent="YSort"]
 position = Vector2( -32, -16 )

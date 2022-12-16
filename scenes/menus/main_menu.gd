@@ -2,6 +2,7 @@ extends Control
 class_name MainMenu
 
 export (NodePath) var quit_path : NodePath = ""
+export (String) var star_scene_id : String = ""
 
 func _ready():
 	if OS.has_feature("web"):
@@ -12,7 +13,7 @@ func _ready():
 
 
 func _start_game():
-	get_tree().call_group("Main", "go_to_scene", "test0")
+	get_tree().call_group("Main", "go_to_scene", star_scene_id)
 	pass
 
 func _quit():
