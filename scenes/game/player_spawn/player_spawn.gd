@@ -5,10 +5,10 @@ class_name PlayerSpawn
 One Shot Player Spawn
 """
 
-signal player_ready
+signal player_ready (player_instance)
 
 export (PackedScene) var player_packed : PackedScene
-export (bool) var skip_animation
+export (bool) var skip_animation := false
 
 func _ready():
 	if skip_animation:
@@ -22,7 +22,7 @@ func _spawn_player():
 		var instance := player_packed.instance() as Node2D
 		instance.global_position = self.global_position
 		get_parent().add_child(instance)
-		get_parent().move_child(instance, 0)
-	emit_signal ("player_ready")
+		get_parent().move_child(instance, get_index())
+		emit_signal ("player_ready", instance)
 	queue_free()
 	pass

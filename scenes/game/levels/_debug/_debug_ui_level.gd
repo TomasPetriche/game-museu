@@ -1,5 +1,6 @@
 extends Control
 
+export (NodePath) var camera_path : NodePath = ""
 export (bool) var show_on_ready :bool = false
 
 func _ready():
@@ -30,8 +31,9 @@ func _process(_delta):
 	var debug_text = ""
 
 	debug_text += _get_player_data()
+	debug_text += _get_camera_data()
 
-	$PanelContainer/DebugLabel.text = debug_text
+	$PanelContainer/VBoxContainer/DebugLabel.text = debug_text
 	pass
 
 func _get_player_data() -> String:
@@ -39,8 +41,19 @@ func _get_player_data() -> String:
 	var player_array = get_tree().get_nodes_in_group("PlayerAvatar")
 
 	if player_array.empty():
-		return "No Player Found"
+		return "No Player Found\n"
 
 	var player = player_array[0] as Node2D
 	var g_pos: Vector2 = player.global_position
-	return "PLAYER:\n" + ("POSITION\n x:%7.2f y:%7.2f\n" % [g_pos.x, g_pos.y])
+	return("PLAYER POSITION\n x: %07.2f\n y: %07.2f\n" % [g_pos.x, g_pos.y])
+
+func _get_camera_data() -> String:
+
+	if camera_path == "":
+		return "No Camera Found\n"
+
+	var camera := get_node(camera_path) as GameCamera
+	var camera_mode : String = GameCamera.CAMERA_MODE.keys()[camera.current_mode]
+	var g_pos: Vector2 = camera.global_position
+	return("CAMERA - %s\n x: %07.2f\n y: %07.2f\n" % [camera_mode, g_pos.x, g_pos.y])
+

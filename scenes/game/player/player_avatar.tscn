@@ -223,7 +223,6 @@ script = ExtResource( 2 )
 [node name="PlayerMovement" type="Node" parent="."]
 script = ExtResource( 3 )
 move_time = 0.2
-can_bounce_wall = false
 
 [node name="MoveTween" type="Tween" parent="PlayerMovement"]
 playback_process_mode = 0

@@ -17,9 +17,15 @@ anchor_bottom = 1.0
 margin_top = -180.0
 margin_right = 160.0
 
-[node name="DebugLabel" type="Label" parent="PanelContainer"]
-self_modulate = Color( 0, 0, 0.160784, 1 )
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 margin_left = 7.0
-margin_top = 83.0
+margin_top = 7.0
 margin_right = 153.0
-margin_bottom = 97.0
+margin_bottom = 173.0
+
+[node name="DebugLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+self_modulate = Color( 0, 0, 0.160784, 1 )
+margin_right = 146.0
+margin_bottom = 31.0
+text = "PLAYER POSITION
+x: 0000.00 y: 0000.00"
