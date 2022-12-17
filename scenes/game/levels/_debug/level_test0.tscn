@@ -12,6 +12,3 @@ tile_data = PoolIntArray( -1179630, 0, 0, -1179629, 0, 0, -1179628, 0, 0, -11796
 
 [node name="DebugUIElements" parent="HUD" index="1"]
 show_on_ready = true
-
-[node name="SnapScreenBordersGizmo" parent="HUD" index="2"]
-iterations = Vector2( 3, 2 )
