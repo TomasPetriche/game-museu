@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/game/player/game_camera.gd" type="Script" id=6]
+[ext_resource path="res://scenes/game/hud/artefact_popup.tscn" type="PackedScene" id=7]
 
 [node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 2 )
@@ -46,12 +47,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PanelContainer" type="PanelContainer" parent="HUD/AllGameElements"]
+[node name="ObjectiveContainer" type="PanelContainer" parent="HUD/AllGameElements"]
 self_modulate = Color( 1, 1, 1, 0.392157 )
 anchor_right = 1.0
 margin_bottom = 100.0
 
-[node name="Label" type="Label" parent="HUD/AllGameElements/PanelContainer"]
+[node name="Label" type="Label" parent="HUD/AllGameElements/ObjectiveContainer"]
 margin_left = 7.0
 margin_top = 43.0
 margin_right = 1017.0
@@ -60,7 +61,11 @@ text = "Artefatos Coletados : X / X"
 align = 1
 valign = 1
 
+[node name="ArtefactPopup" parent="HUD/AllGameElements" instance=ExtResource( 7 )]
+
 [node name="DebugUIElements" parent="HUD" instance=ExtResource( 5 )]
 camera_path = NodePath("../../YSort/GameCamera")
 
 [connection signal="player_ready" from="YSort/PlayerSpawn" to="YSort/GameCamera" method="_set_pivot"]
+[connection signal="about_to_show" from="HUD/AllGameElements/ArtefactPopup" to="HUD/AllGameElements/ObjectiveContainer" method="hide"]
+[connection signal="popup_hide" from="HUD/AllGameElements/ArtefactPopup" to="HUD/AllGameElements/ObjectiveContainer" method="show"]

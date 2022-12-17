@@ -1,22 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/visuals/pattern-pack-pixel/Tilemap/tilemap_grayscale_packed.png" type="Texture" id=1]
 [ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=2]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.gd" type="Script" id=3]
 [ext_resource path="res://scenes/game/tweens/artefact_up_down_tween.gd" type="Script" id=4]
+[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.0
 
 [node name="ArtefactPickUp" type="Area2D" groups=["Artefacts"]]
 script = ExtResource( 3 )
+icon_texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )
-z_index = -1
+z_index = 1
 texture = ExtResource( 1 )
 offset = Vector2( 0, -16 )
 hframes = 8
@@ -24,7 +26,6 @@ vframes = 8
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.458824 )
-z_index = -2
 texture = ExtResource( 2 )
 
 [node name="UpDownTween" type="Tween" parent="."]
