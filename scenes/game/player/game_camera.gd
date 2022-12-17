@@ -33,7 +33,7 @@ func _set_pivot(new_pivot : Node2D):
 func _set_camera_mode(new_mode):
 	var previous_mode = current_mode
 	current_mode = new_mode
-	print("CAMERA SET ", current_mode)
+	#print("CAMERA SET ", current_mode)
 	
 	match (new_mode):
 		CAMERA_MODE.TOP_LEFT:
