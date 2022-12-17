@@ -4,6 +4,7 @@
 [ext_resource path="res://scenes/game/hud/artefact_popup.gd" type="Script" id=2]
 
 [node name="ArtefactPopup" type="Popup" groups=["ArtefactPopup"]]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -21,11 +22,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 36
+custom_constants/separation = 52
+alignment = 1
 
 [node name="NameContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 23.0
 margin_right = 1024.0
-margin_bottom = 94.0
+margin_bottom = 117.0
 custom_constants/margin_top = 40
 custom_constants/margin_bottom = 40
 
@@ -38,9 +41,9 @@ align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 130.0
+margin_top = 169.0
 margin_right = 1024.0
-margin_bottom = 386.0
+margin_bottom = 425.0
 custom_constants/separation = 100
 alignment = 1
 
@@ -73,9 +76,9 @@ align = 1
 valign = 1
 
 [node name="ButtonContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 422.0
+margin_top = 477.0
 margin_right = 1024.0
-margin_bottom = 522.0
+margin_bottom = 577.0
 custom_constants/margin_right = 200
 custom_constants/margin_top = 20
 custom_constants/margin_left = 200

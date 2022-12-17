@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "ArtefactData",
+"language": "GDScript",
+"path": "res://resources/artefact_data/artefact_data.gd"
+}, {
 "base": "Area2D",
 "class": "ArtefactPickUp",
 "language": "GDScript",
@@ -80,6 +85,7 @@ _global_script_classes=[ {
 "path": "res://scenes/tools/tile_map_filler.gd"
 } ]
 _global_script_class_icons={
+"ArtefactData": "",
 "ArtefactPickUp": "",
 "ArtefactPopup": "",
 "ArtefactTween": "",
