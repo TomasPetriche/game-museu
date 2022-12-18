@@ -1,10 +1,14 @@
 extends Control
 
+
+export (NodePath) var player_path : NodePath = ""
 export (NodePath) var camera_path : NodePath = ""
 export (bool) var show_on_ready :bool = false
 
-func _ready():
 
+
+
+func _ready():
 	if OS.has_feature("standalone"):
 		self.queue_free()
 		return
@@ -29,23 +33,25 @@ func _input(event):
 func _process(_delta):
 
 	var debug_text = ""
-
 	debug_text += _get_player_data()
 	debug_text += _get_camera_data()
-
 	$PanelContainer/VBoxContainer/DebugLabel.text = debug_text
+	pass
+
+func _set_path_from_instance(node : Node, node_path_var : String):
+	set(node_path_var, node.get_path())
 	pass
 
 func _get_player_data() -> String:
 	
-	var player_array = get_tree().get_nodes_in_group("PlayerAvatar")
-
-	if player_array.empty():
+	if player_path == "":
 		return "No Player Found\n"
 
-	var player = player_array[0] as Node2D
+	var player = get_node(player_path)
 	var g_pos: Vector2 = player.global_position
 	return("PLAYER POSITION\n x: %07.2f\n y: %07.2f\n" % [g_pos.x, g_pos.y])
+
+
 
 func _get_camera_data() -> String:
 

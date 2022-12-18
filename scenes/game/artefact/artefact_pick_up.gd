@@ -14,11 +14,12 @@ func _ready():
 
 func _check_pick_up(body:Node):
 	if body is KinematicBody2D:
-		emit_signal("picked_up")
+		
 		if artefact_data:
 		# Call an call_group with a null argument, does not work
 			artefact_data = artefact_data as ArtefactData
 			get_tree().call_group("ArtefactPopup", "_popup_pick_up", artefact_data.name_info, artefact_data.text_info, artefact_data.icon_texture)
 		yield(get_tree(),"idle_frame")
+		emit_signal("picked_up")
 		queue_free()
 	pass 

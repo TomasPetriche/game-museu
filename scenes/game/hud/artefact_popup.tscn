@@ -4,7 +4,6 @@
 [ext_resource path="res://scenes/game/hud/artefact_popup.gd" type="Script" id=2]
 
 [node name="ArtefactPopup" type="Popup" groups=["ArtefactPopup"]]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -13,7 +12,7 @@ textLabel = NodePath("VBoxContainer/HBoxContainer/MarginContainer/TextLabel")
 iconTexture = NodePath("VBoxContainer/HBoxContainer/ImageContainer/IconTextureRect")
 
 [node name="Panel" type="Panel" parent="."]
-self_modulate = Color( 1, 1, 1, 0.392157 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
