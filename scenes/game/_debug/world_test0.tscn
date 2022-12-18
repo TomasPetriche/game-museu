@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/player/player_avatar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/enemies/pusher_enemy.tscn" type="PackedScene" id=5]
 
 [node name="WorldTest0" type="Node2D" groups=["FreeOnChangeScene"]]
 __meta__ = {
@@ -33,3 +34,9 @@ tile_data = PoolIntArray( -196602, 0, 0, -196600, 0, 0, -196599, 0, 0, -131062, 
 
 [node name="ArtefactPickUp" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 480, 208 )
+
+[node name="PusherEnemy" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 672, 240 )
+position1 = Vector2( 288, 48 )
+position2 = Vector2( 672, 240 )
+move_time = 3.0

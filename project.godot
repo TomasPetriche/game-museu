@@ -84,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/game/player_spawn/player_spawn.gd"
 }, {
+"base": "Area2D",
+"class": "PusherEnemy",
+"language": "GDScript",
+"path": "res://scenes/game/enemies/pusher_enemy.gd"
+}, {
 "base": "Node2D",
 "class": "SnapScreenBordersGizmo",
 "language": "GDScript",
@@ -110,6 +115,7 @@ _global_script_class_icons={
 "PlayerController": "",
 "PlayerMovement": "",
 "PlayerSpawn": "",
+"PusherEnemy": "",
 "SnapScreenBordersGizmo": "",
 "TileMapFiller": ""
 }
