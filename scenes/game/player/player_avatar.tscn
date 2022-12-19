@@ -203,6 +203,7 @@ tracks/1/keys = {
 motion/sync_to_physics = true
 
 [node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.713726, 1, 0.552941, 1 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -12 )

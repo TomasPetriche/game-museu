@@ -6,15 +6,16 @@ export (Vector2) var position1 := Vector2()
 export (Vector2) var position2 := Vector2()
 export (float) var move_time := 1.0
 
-var sprite_offset_tween := [Vector2(0, -12), Vector2(0 , -16)]
-var anim_time := 0.25
+export (Array, Vector2) var sprite_offset_tween := [Vector2(0, -12), Vector2(0 , -16)]
+export (float) var anim_time := 0.25
 
 func _ready():
-	self.connect("body_entered", self, "_check_body")
+	var _err = null
 	
-	$MoveTween.connect("tween_all_completed", self, "_new_move")
+	_err = self.connect("body_entered", self, "_check_body")
+	_err = $MoveTween.connect("tween_all_completed", self, "_new_move")
 	_new_move()
-	$AnimTween.connect("tween_all_completed", self, "_new_anim")
+	_err = $AnimTween.connect("tween_all_completed", self, "_new_anim")
 	_new_anim()
 	pass
 	
