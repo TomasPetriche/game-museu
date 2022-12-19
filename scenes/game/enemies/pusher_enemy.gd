@@ -6,8 +6,8 @@ export (Vector2) var position1 := Vector2()
 export (Vector2) var position2 := Vector2()
 export (float) var move_time := 1.0
 
-export (Array, Vector2) var sprite_offset_tween := [Vector2(0, -12), Vector2(0 , -16)]
-export (float) var anim_time := 0.25
+onready var sprite_offset_tween := [Vector2(0, -12), Vector2(0, -16)].duplicate(true)
+export (float) var anim_time := 0.65
 
 func _ready():
 	var _err = null
@@ -28,7 +28,7 @@ func _new_move():
 	position2 = temp
 
 func _new_anim():
-	$AnimTween.interpolate_property($Sprite, "offset", sprite_offset_tween[0], sprite_offset_tween[0], anim_time)
+	$AnimTween.interpolate_property($Sprite, "offset", sprite_offset_tween[0], sprite_offset_tween[1], anim_time)
 	$AnimTween.start()
 	sprite_offset_tween.invert()
 	pass
