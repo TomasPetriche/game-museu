@@ -42,6 +42,7 @@ position = Vector2( 96, 592 )
 position1 = Vector2( 352, 464 )
 position2 = Vector2( 96, 592 )
 move_time = 2.5
+push_direction = Vector2( -1, 0 )
 
 [node name="ArtefactPickUp1" parent="YSort" index="6" instance=ExtResource( 2 )]
 position = Vector2( 416, 176 )

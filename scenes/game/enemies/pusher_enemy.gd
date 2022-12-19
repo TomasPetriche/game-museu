@@ -7,7 +7,11 @@ export (Vector2) var position2 := Vector2()
 export (float) var move_time := 1.0
 
 onready var sprite_offset_tween := [Vector2(0, -12), Vector2(0, -16)].duplicate(true)
-export (float) var anim_time := 0.65
+var anim_time := 0.65
+
+const move_tile_size = Vector2(64, 32)
+export (Vector2) var push_direction := Vector2.UP
+export (float) var push_distance := 1.0
 
 func _ready():
 	var _err = null
@@ -33,6 +37,21 @@ func _new_anim():
 	sprite_offset_tween.invert()
 	pass
 	
-func _check_body(body: Node):
-	print(body.name)
+func _check_body(body: Node2D):
+	if body.is_in_group("PlayerAvatar"):
+		body = body as KinematicBody2D
+		print(body.name, body.global_position)
+		body.move_and_collide(card2iso(push_direction)* move_tile_size * push_distance)
+		print(body.name, body.global_position)
 	pass
+	
+static func card2iso(vector : Vector2) -> Vector2:
+	if vector == Vector2.UP:
+		vector = Vector2(1, -1)
+	elif vector == Vector2.DOWN:
+		vector = Vector2(-1, 1)
+	elif vector == Vector2.RIGHT:
+		vector = Vector2(1, 1)
+	elif vector == Vector2.LEFT:
+		vector = Vector2(-1, -1)
+	return vector
