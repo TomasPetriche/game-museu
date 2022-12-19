@@ -9,6 +9,56 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "ArtefactData",
+"language": "GDScript",
+"path": "res://resources/artefact_data/artefact_data.gd"
+}, {
+"base": "Area2D",
+"class": "ArtefactPickUp",
+"language": "GDScript",
+"path": "res://scenes/game/artefact/artefact_pick_up.gd"
+}, {
+"base": "Popup",
+"class": "ArtefactPopup",
+"language": "GDScript",
+"path": "res://scenes/game/hud/artefact_popup.gd"
+}, {
+"base": "Tween",
+"class": "ArtefactTween",
+"language": "GDScript",
+"path": "res://scenes/game/tweens/artefact_up_down_tween.gd"
+}, {
+"base": "Area2D",
+"class": "ExitArea",
+"language": "GDScript",
+"path": "res://scenes/game/areas/exit_area.gd"
+}, {
+"base": "Camera2D",
+"class": "GameCamera",
+"language": "GDScript",
+"path": "res://scenes/game/player/game_camera.gd"
+}, {
+"base": "CanvasLayer",
+"class": "HUD",
+"language": "GDScript",
+"path": "res://scenes/game/hud/hud.gd"
+}, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://scenes/game/levels/level.gd"
+}, {
+"base": "Node",
+"class": "Main",
+"language": "GDScript",
+"path": "res://scenes/main.gd"
+}, {
+"base": "Control",
+"class": "MainMenu",
+"language": "GDScript",
+"path": "res://scenes/menus/main_menu.gd"
+}, {
 "base": "AnimationPlayer",
 "class": "PlayerAnimation",
 "language": "GDScript",
@@ -29,24 +79,61 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/game/player/player_movement.gd"
 }, {
+"base": "Position2D",
+"class": "PlayerSpawn",
+"language": "GDScript",
+"path": "res://scenes/game/player_spawn/player_spawn.gd"
+}, {
+"base": "Area2D",
+"class": "PusherEnemy",
+"language": "GDScript",
+"path": "res://scenes/game/enemies/pusher_enemy.gd"
+}, {
+"base": "Node2D",
+"class": "SnapScreenBordersGizmo",
+"language": "GDScript",
+"path": "res://scenes/tools/snap_screen_boorders_gizmo.gd"
+}, {
 "base": "Node",
 "class": "TileMapFiller",
 "language": "GDScript",
 "path": "res://scenes/tools/tile_map_filler.gd"
 } ]
 _global_script_class_icons={
+"ArtefactData": "",
+"ArtefactPickUp": "",
+"ArtefactPopup": "",
+"ArtefactTween": "",
+"ExitArea": "",
+"GameCamera": "",
+"HUD": "",
+"Level": "",
+"Main": "",
+"MainMenu": "",
 "PlayerAnimation": "",
 "PlayerAudio": "",
 "PlayerController": "",
 "PlayerMovement": "",
+"PlayerSpawn": "",
+"PusherEnemy": "",
+"SnapScreenBordersGizmo": "",
 "TileMapFiller": ""
 }
 
 [application]
 
 config/name="Prototipo Jogo Museu"
-run/main_scene="res://scenes/world_test.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://assets/visuals/icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[global]
+
+external=false
 
 [gui]
 
@@ -54,6 +141,34 @@ common/drop_mouse_on_gui_input_disabled=true
 
 [input]
 
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 gp_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)

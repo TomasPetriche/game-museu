@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=1]
+[ext_resource path="res://scenes/game/hud/artefact_popup.gd" type="Script" id=2]
+
+[node name="ArtefactPopup" type="Popup" groups=["ArtefactPopup"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+nameLabel = NodePath("VBoxContainer/NameContainer/NameLabel")
+textLabel = NodePath("VBoxContainer/HBoxContainer/MarginContainer/TextLabel")
+iconTexture = NodePath("VBoxContainer/HBoxContainer/ImageContainer/IconTextureRect")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 52
+alignment = 1
+
+[node name="NameContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 23.0
+margin_right = 1024.0
+margin_bottom = 117.0
+custom_constants/margin_top = 40
+custom_constants/margin_bottom = 40
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/NameContainer"]
+margin_top = 40.0
+margin_right = 1024.0
+margin_bottom = 54.0
+text = "Você encontrou um novo artefato!"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 169.0
+margin_right = 1024.0
+margin_bottom = 425.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="ImageContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 110.0
+margin_right = 366.0
+margin_bottom = 256.0
+
+[node name="IconTextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/ImageContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 466.0
+margin_right = 914.0
+margin_bottom = 256.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+
+[node name="TextLabel" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+margin_left = 100.0
+margin_top = 121.0
+margin_right = 348.0
+margin_bottom = 135.0
+text = "ESTE é um artefato muiro interessante."
+align = 1
+valign = 1
+
+[node name="ButtonContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 477.0
+margin_right = 1024.0
+margin_bottom = 577.0
+custom_constants/margin_right = 200
+custom_constants/margin_top = 20
+custom_constants/margin_left = 200
+custom_constants/margin_bottom = 20
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+margin_left = 200.0
+margin_top = 20.0
+margin_right = 824.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 300, 60 )
+text = "FECHAR"
+
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/CloseButton" to="." method="hide"]

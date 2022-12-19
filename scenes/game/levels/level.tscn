@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
+[ext_resource path="res://scenes/game/player_spawn/player_spawn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/player/game_camera.gd" type="Script" id=6]
+[ext_resource path="res://scenes/game/hud/hud.tscn" type="PackedScene" id=7]
+
+[node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FloorTileMap" parent="." instance=ExtResource( 4 )]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="PlayerSpawn" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 736, 272 )
+
+[node name="GameCamera" type="Camera2D" parent="YSort"]
+current = true
+script = ExtResource( 6 )
+
+[node name="WallTileMap" type="TileMap" parent="YSort"]
+position = Vector2( -32, -16 )
+z_index = -10
+z_as_relative = false
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 64 )
+cell_tile_origin = 1
+cell_y_sort = true
+show_collision = true
+centered_textures = true
+format = 1
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+
+[connection signal="player_ready" from="YSort/PlayerSpawn" to="YSort/GameCamera" method="_set_pivot"]

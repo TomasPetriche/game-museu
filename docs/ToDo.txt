@@ -1,26 +1,34 @@
 
 #ToDo
 - Realizar Protótipo
-	- Player
-		- Controle
-		- Movimento
-		- Animação
-		- Som
-		- Colisão
-	- Game Manager
+
+	- Main
 		- Trocar de cena
 		- Tocar Musica
 		- Iniciar Nivel
+
 	- Inimigos
 		- Movimento
 		- Colisão e Interação
-	- Itens Coletaveis
-		- Emitir sinais
+
+	- LevelManager
+		- Winnig consitions
+		- Next Level
+
 
 #Completed
 - Fazer revisão com Petri
 - Criar branch petriche
 
+- Player
+	- Controle
+	- Movimento
+	- Animação
+	- Som
+	- Colisão
+
+- Itens Coletaveis
+	- Emitir sinais
 
 #Hold
 

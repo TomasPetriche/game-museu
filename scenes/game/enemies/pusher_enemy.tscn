@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/visuals/placeholders/creature-sheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=2]
+[ext_resource path="res://scenes/game/enemies/pusher_enemy.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.0
+
+[node name="PusherEnemy" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="Collision2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 1, 0, 0, 1 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -12 )
+flip_h = true
+hframes = 4
+vframes = 2
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="MoveTween" type="Tween" parent="."]
+playback_process_mode = 0
+
+[node name="AnimTween" type="Tween" parent="."]
