@@ -1,14 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/menus/main_menu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/game/_debug/world_test0.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/game/levels/rooms/level_room3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/game/levels/_debug/level_test0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/game/levels/rooms/level_room2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/game/levels/rooms/level_room1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/menus/intro_menu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/menus/end_menu.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 scenes = {
 "MainMenu": ExtResource( 2 ),
+"end": ExtResource( 9 ),
+"intro": ExtResource( 8 ),
 "level_test0": ExtResource( 5 ),
+"room1": ExtResource( 7 ),
+"room2": ExtResource( 6 ),
+"room3": ExtResource( 4 ),
 "test0": ExtResource( 3 )
 }

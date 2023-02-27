@@ -6,13 +6,14 @@
 [ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=5]
 [ext_resource path="res://scenes/game/areas/exit_area.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/game/enemies/pusher_enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/game/enemies/reset_enemy.tscn" type="PackedScene" id=7]
 
 [node name="LevelTest" instance=ExtResource( 1 )]
 next_level_id = "MainMenu"
 
-[node name="PlayerSpawn" parent="YSort" index="0"]
-skip_animation = true
+[node name="GameCamera" parent="YSort" index="1"]
+position = Vector2( 608, 272 )
+zoom = Vector2( 2, 2 )
 
 [node name="WallTileMap" parent="YSort" index="2"]
 z_as_relative = true
@@ -29,29 +30,25 @@ cell_y_sort = true
 show_collision = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -196599, 0, 0, 393231, 0, 0, 458767, 0, 0 )
+tile_data = PoolIntArray( -196599, 0, 0, 393230, 0, 0, 393231, 0, 0, 458766, 0, 0, 458767, 0, 0 )
 
-[node name="PusherEnemy0" parent="YSort" index="4" instance=ExtResource( 7 )]
-position = Vector2( 608, 400 )
-position1 = Vector2( 608, 400 )
-position2 = Vector2( 800, 496 )
-move_time = 2.0
+[node name="ResetEnemy" parent="YSort" index="4" instance=ExtResource( 7 )]
+position = Vector2( 416, 560 )
+__meta__ = {
+"_edit_pinned_properties_": [ "position" ]
+}
+position1 = Vector2( 736, 400 )
+position2 = Vector2( 416, 560 )
+move_time = 3.0
 
-[node name="PusherEnemy1" parent="YSort" index="5" instance=ExtResource( 7 )]
-position = Vector2( 96, 592 )
-position1 = Vector2( 352, 464 )
-position2 = Vector2( 96, 592 )
-move_time = 2.5
-push_direction = Vector2( -1, 0 )
-
-[node name="ArtefactPickUp1" parent="YSort" index="6" instance=ExtResource( 2 )]
+[node name="ArtefactPickUp1" parent="YSort" index="5" instance=ExtResource( 2 )]
 position = Vector2( 416, 176 )
 
-[node name="ArtefactPickUp2" parent="YSort" index="7" instance=ExtResource( 2 )]
+[node name="ArtefactPickUp2" parent="YSort" index="6" instance=ExtResource( 2 )]
 position = Vector2( 88, 208 )
 artefact_data = ExtResource( 3 )
 
-[node name="ExitArea" parent="YSort" index="8" instance=ExtResource( 6 )]
+[node name="ExitArea" parent="YSort" index="7" instance=ExtResource( 6 )]
 position = Vector2( 800, 176 )
 
 [node name="DebugUILevel" parent="HUD" index="1" instance=ExtResource( 4 )]

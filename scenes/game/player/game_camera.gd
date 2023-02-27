@@ -1,6 +1,7 @@
 extends Camera2D
 class_name GameCamera
 
+# DEBUG ONLY
 
 enum CAMERA_MODE {TOP_LEFT, FOLLOW, SNAP}
 export (CAMERA_MODE) var current_mode := CAMERA_MODE.TOP_LEFT setget _set_camera_mode
@@ -10,6 +11,11 @@ var screen_size: Vector2 = Vector2(1024, 600)
 
 
 func _ready():
+	
+	if OS.has_feature("standalone"):
+		self.queue_free()
+		return
+	
 	process_mode =Camera2D.CAMERA2D_PROCESS_PHYSICS
 	_set_camera_mode(current_mode)
 	pass

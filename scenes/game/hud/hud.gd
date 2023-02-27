@@ -20,3 +20,11 @@ func _update_hud():
 	else:
 		$AllGameElements/ObjectiveContainer/ObjectiveLabel.text = "Vá para a próxima sala!"
 	pass
+
+func _resume():
+	get_tree().call_group("PlayerAvatar", "_set_active", true)
+	pass
+
+func _pause():
+	get_tree().call_group("PlayerAvatar", "_set_active", false)
+	pass

@@ -8,10 +8,15 @@ signal just_interacted
 
 var _previous_movement = Vector2()
 
+var active : bool = true setget _set_active
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	
+	# Active
+	if not active:
+		return
 
 	# Get Directions
 	var direction_input : Vector2 = Vector2(
@@ -34,3 +39,8 @@ func _process(_delta):
 	if interact_input:
 		emit_signal("just_interacted")
 	pass
+
+func _set_active(value: bool):
+	active = value
+	_previous_movement = Vector2()
+	emit_signal("movement_changed", Vector2())

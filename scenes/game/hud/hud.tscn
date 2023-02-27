@@ -14,7 +14,7 @@ __meta__ = {
 }
 
 [node name="ObjectiveContainer" type="PanelContainer" parent="AllGameElements"]
-self_modulate = Color( 1, 1, 1, 0.392157 )
+self_modulate = Color( 1, 1, 1, 0.784314 )
 anchor_right = 1.0
 margin_bottom = 100.0
 
@@ -29,5 +29,7 @@ valign = 1
 
 [node name="ArtefactPopup" parent="AllGameElements" instance=ExtResource( 2 )]
 
+[connection signal="about_to_show" from="AllGameElements/ArtefactPopup" to="." method="_pause"]
 [connection signal="about_to_show" from="AllGameElements/ArtefactPopup" to="AllGameElements/ObjectiveContainer" method="hide"]
+[connection signal="popup_hide" from="AllGameElements/ArtefactPopup" to="." method="_resume"]
 [connection signal="popup_hide" from="AllGameElements/ArtefactPopup" to="AllGameElements/ObjectiveContainer" method="show"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
+
+[node name="EndMenu" type="Node2D" groups=["FreeOnChangeScene"]]
+script = ExtResource( 1 )
+star_scene_id = "MainMenu"
+
+[node name="IntroLayer" type="CanvasLayer" parent="."]
+
+[node name="FullScreen" type="Control" parent="IntroLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelContainer" type="PanelContainer" parent="IntroLayer/FullScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
+margin_left = 7.0
+margin_top = 145.0
+margin_right = 1017.0
+margin_bottom = 261.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+
+[node name="Label" type="Label" parent="IntroLayer/FullScreen/MarginContainer"]
+margin_left = 100.0
+margin_top = 51.0
+margin_right = 910.0
+margin_bottom = 65.0
+text = "VOCÊ COLETOU TODOS OS ARTEFATOS!"
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="IntroLayer/FullScreen"]
+margin_left = 7.0
+margin_top = 264.0
+margin_right = 1017.0
+margin_bottom = 380.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+
+[node name="Label" type="Label" parent="IntroLayer/FullScreen/MarginContainer2"]
+margin_left = 100.0
+margin_top = 51.0
+margin_right = 910.0
+margin_bottom = 65.0
+text = "OBRIGADO POR JOGAR! ;)"
+align = 1
+
+[node name="Control" type="CenterContainer" parent="IntroLayer/FullScreen"]
+margin_left = 7.0
+margin_top = 531.0
+margin_right = 1017.0
+margin_bottom = 581.0
+
+[node name="NextButton" type="Button" parent="IntroLayer/FullScreen/Control"]
+margin_left = 305.0
+margin_right = 705.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 400, 50 )
+text = "MENU"
+
+[connection signal="button_down" from="IntroLayer/FullScreen/Control/NextButton" to="." method="_next"]
