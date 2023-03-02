@@ -40,6 +40,9 @@ func _check_body(body: Node2D):
 	if body.is_in_group("PlayerAvatar"):
 		body = body as PlayerAvatar
 		body._fade()
+		# EMERGENCY
+		var destroy_object := DestroyParent.new(RESTART_DELAY) 
+		body.add_child(destroy_object, true)
 		yield(get_tree().create_timer(RESTART_DELAY), "timeout")
 		get_tree().call_group("PlayerSpawn", "_spawn_player")
 	pass

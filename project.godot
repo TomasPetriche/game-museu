@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/game/tweens/artefact_up_down_tween.gd"
 }, {
+"base": "Timer",
+"class": "DestroyParent",
+"language": "GDScript",
+"path": "res://scenes/game/utilities/destroy_parent.gd"
+}, {
 "base": "Area2D",
 "class": "ExitArea",
 "language": "GDScript",
@@ -119,6 +124,7 @@ _global_script_class_icons={
 "ArtefactPickUp": "",
 "ArtefactPopup": "",
 "ArtefactTween": "",
+"DestroyParent": "",
 "ExitArea": "",
 "GameCamera": "",
 "HUD": "",
