@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/game/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.tscn" type="PackedScene" id=2]
-[ext_resource path="res://resources/artefact_data/ad_test1.tres" type="Resource" id=3]
+[ext_resource path="res://resources/artefact_data/ad_room2_a.tres" type="Resource" id=3]
 [ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=5]
 [ext_resource path="res://scenes/game/areas/exit_area.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/game/enemies/reset_enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://resources/artefact_data/ad_room2_b.tres" type="Resource" id=8]
+[ext_resource path="res://resources/artefact_data/ad_room2_c.tres" type="Resource" id=9]
 
 [node name="LevelRoom2" instance=ExtResource( 1 )]
 next_level_id = "room3"
@@ -58,14 +60,15 @@ move_time = 4.0
 
 [node name="ArtefactPickUp1" parent="YSort" index="6" instance=ExtResource( 2 )]
 position = Vector2( 1568, 944 )
+artefact_data = ExtResource( 3 )
 
 [node name="ArtefactPickUp2" parent="YSort" index="7" instance=ExtResource( 2 )]
 position = Vector2( 1248, 464 )
-artefact_data = ExtResource( 3 )
+artefact_data = ExtResource( 8 )
 
 [node name="ArtefactPickUp3" parent="YSort" index="8" instance=ExtResource( 2 )]
 position = Vector2( 864, 912 )
-artefact_data = ExtResource( 3 )
+artefact_data = ExtResource( 9 )
 
 [node name="ExitArea" parent="YSort" index="9" instance=ExtResource( 6 )]
 position = Vector2( 256, 544 )

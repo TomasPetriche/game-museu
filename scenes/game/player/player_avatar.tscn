@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/visuals/placeholders/creature-sheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/visuals/gameplay/creature-sheet.png" type="Texture" id=1]
 [ext_resource path="res://scenes/game/player/player_controller.gd" type="Script" id=2]
 [ext_resource path="res://scenes/game/player/player_movement.gd" type="Script" id=3]
 [ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=4]
@@ -73,7 +73,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0.713726, 1, 0.552941, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("ShadowSprite:scale")
@@ -138,7 +138,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.713726, 1, 0.552941, 1 ), Color( 0.713726, 1, 0.552941, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/4/type = "method"
 tracks/4/path = NodePath("PlayerAudio")
@@ -334,10 +334,10 @@ tracks/1/keys = {
 script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
-self_modulate = Color( 0.713726, 1, 0.552941, 1 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -12 )
+flip_h = true
 hframes = 4
 vframes = 2
 

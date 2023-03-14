@@ -34,6 +34,7 @@ cell_y_sort = true
 show_collision = true
 centered_textures = true
 format = 1
+tile_data = PoolIntArray( 196612, 0, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 

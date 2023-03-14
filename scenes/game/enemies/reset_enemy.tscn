@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/visuals/placeholders/creature-sheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/visuals/gameplay/ventos-do-tempo.png" type="Texture" id=1]
 [ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=2]
 [ext_resource path="res://scenes/game/enemies/reset_enemy.gd" type="Script" id=3]
 
@@ -14,13 +14,11 @@ script = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-self_modulate = Color( 0.784314, 0.309804, 1, 1 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -12 )
 flip_h = true
-hframes = 4
-vframes = 2
+hframes = 2
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 z_index = -1

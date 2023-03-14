@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/placeholders/creature-sheet.png" type="Texture" id=2]
-[ext_resource path="res://assets/visuals/placeholders/arrow256.png" type="Texture" id=3]
+[ext_resource path="res://assets/visuals/gameplay/creature-sheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato_010.png" type="Texture" id=3]
+[ext_resource path="res://assets/visuals/gameplay/ventos-do-tempo.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Auto Walk"
@@ -140,7 +141,6 @@ margin_bottom = 116.0
 alignment = 1
 
 [node name="Sprite" type="Sprite" parent="IntroLayer/FullScreen/WalkContainer/VBoxContainer"]
-modulate = Color( 0.713726, 1, 0.552941, 1 )
 position = Vector2( 153, -28 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
@@ -208,12 +208,10 @@ margin_bottom = 116.0
 alignment = 1
 
 [node name="Sprite" type="Sprite" parent="IntroLayer/FullScreen/WindContainer/VBoxContainer"]
-modulate = Color( 0.784314, 0.309804, 1, 1 )
 position = Vector2( 153, -28 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-hframes = 4
-vframes = 2
+texture = ExtResource( 4 )
+hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="IntroLayer/FullScreen/WindContainer/VBoxContainer/Sprite"]
 autoplay = "float"
