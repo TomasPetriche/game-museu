@@ -44,4 +44,4 @@ layer = -10
 [node name="WhiteBackground" type="ColorRect" parent="Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.95, 0.95, 0.95, 1 )
+color = Color( 0.56, 0.7, 0.651, 1 )
