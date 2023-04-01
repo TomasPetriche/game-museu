@@ -4,6 +4,10 @@ class_name ArtefactTween
 """
 Change sprite offset fromVector2 to Vector2
 """
+
+
+export (bool) var active : bool = true
+
 export (Vector2) var plus_offset : Vector2 = Vector2(0, -8)
 export (float) var tween_time :float = .8
 
@@ -15,7 +19,8 @@ onready var shadow_sprite : Sprite = get_node_or_null (shadow_path)
 onready var base_offset : Vector2 = main_sprite.offset
 
 func _ready():
-	_go_up()
+	if active:
+		_go_up()
 	pass 
 
 func _go_up():

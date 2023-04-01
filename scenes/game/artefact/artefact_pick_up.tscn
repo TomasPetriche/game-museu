@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/visuals/iso_shadow.png" type="Texture" id=2]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.gd" type="Script" id=3]
 [ext_resource path="res://scenes/game/tweens/artefact_up_down_tween.gd" type="Script" id=4]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=5]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.0
@@ -17,10 +17,10 @@ artefact_data = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 4, 4 )
 z_index = 1
 texture = ExtResource( 5 )
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -16 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.458824 )
@@ -28,7 +28,7 @@ texture = ExtResource( 2 )
 
 [node name="UpDownTween" type="Tween" parent="."]
 script = ExtResource( 4 )
-plus_offset = Vector2( 0, -68 )
+active = false
 tween_time = 1.5
 sprite_path = NodePath("../Sprite")
 shadow_path = NodePath("../ShadowSprite")

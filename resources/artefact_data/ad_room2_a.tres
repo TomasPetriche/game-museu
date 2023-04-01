@@ -1,12 +1,12 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/artefact_data/artefact_data.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=2]
 [ext_resource path="res://assets/visuals/artefacts/artefato_004.png" type="Texture" id=3]
 
 [resource]
 script = ExtResource( 1 )
-name_info = "NAME_TEST"
-text_info = "TEXT_DESCRIPTION"
+name_info = "Cestas"
+text_info = "O conjunto de cestarias foi produzido por diferentes grupos indígenas como Paressis, Xavante e Nhambiquara. Podemos perceber as diferenças das cestarias através do trançado e do grafismo que algumas trazem, mostrando na produção cultural a identidade de cada grupo. Ao mesmo tempo é possível perceber que os formatos e tamanhos diferentes estão relacionados aos usos: cesta para pesca, cesta para colheita da mandioca, cesta para carregar crianças, cesta para guarda de objetos."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

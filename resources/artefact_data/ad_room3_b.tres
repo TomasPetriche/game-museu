@@ -1,12 +1,12 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/artefact_data/artefact_data.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=2]
 [ext_resource path="res://assets/visuals/artefacts/artefato_008.png" type="Texture" id=3]
 
 [resource]
 script = ExtResource( 1 )
-name_info = "NAME_TEST"
-text_info = "TEXT_DESCRIPTION"
+name_info = "Medalhão Carlos Gomes"
+text_info = "Molde em gesso para confecção da efígie de Carlos Gomes em 1936. Carlos Gomes nasceu em Campinas, filho de pai com descendência negra e mãe indígena. Não era bem acolhido por sua origem, mas sua atuação como músico sempre chamou atenção. Seus estudos foram financiados por Dom Pedro II. Estudou, viveu e realizou importante produção musical na Europa. Uma das suas principais obras é a ópera O Guarani, que inspirou o nome do time de futebol Guarani, de Campinas."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

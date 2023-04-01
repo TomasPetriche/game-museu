@@ -62,7 +62,7 @@ __meta__ = {
 }
 position1 = Vector2( -96, 368 )
 position2 = Vector2( 864, 848 )
-move_time = 2.5
+move_time = 4.0
 
 [node name="ResetEnemy4" parent="YSort" index="6" instance=ExtResource( 7 )]
 position = Vector2( 160, 240 )
@@ -74,7 +74,7 @@ position2 = Vector2( 544, 48 )
 move_time = 3.0
 
 [node name="ArtefactPickUp1" parent="YSort" index="7" instance=ExtResource( 2 )]
-position = Vector2( 352, 80 )
+position = Vector2( 480, 16 )
 artefact_data = ExtResource( 3 )
 
 [node name="ArtefactPickUp2" parent="YSort" index="8" instance=ExtResource( 2 )]

@@ -7,6 +7,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [ 399.0 ]
+}
 nameLabel = NodePath("VBoxContainer/NameContainer/NameLabel")
 textLabel = NodePath("VBoxContainer/HBoxContainer/MarginContainer/TextLabel")
 iconTexture = NodePath("VBoxContainer/HBoxContainer/ImageContainer/IconTextureRect")
@@ -25,9 +28,9 @@ custom_constants/separation = 52
 alignment = 1
 
 [node name="NameContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 23.0
+margin_top = 1.0
 margin_right = 1024.0
-margin_bottom = 117.0
+margin_bottom = 95.0
 custom_constants/margin_top = 40
 custom_constants/margin_bottom = 40
 
@@ -40,44 +43,45 @@ align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 169.0
+margin_top = 147.0
 margin_right = 1024.0
-margin_bottom = 425.0
-custom_constants/separation = 100
+margin_bottom = 447.0
+custom_constants/separation = 40
 alignment = 1
 
 [node name="ImageContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 110.0
-margin_right = 366.0
-margin_bottom = 256.0
+margin_left = 64.0
+margin_right = 320.0
+margin_bottom = 300.0
 
 [node name="IconTextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/ImageContainer"]
+margin_top = 22.0
 margin_right = 256.0
-margin_bottom = 256.0
+margin_bottom = 278.0
 rect_min_size = Vector2( 256, 256 )
 texture = ExtResource( 1 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 466.0
-margin_right = 914.0
-margin_bottom = 256.0
+margin_left = 360.0
+margin_right = 960.0
+margin_bottom = 300.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
 [node name="TextLabel" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 margin_left = 100.0
-margin_top = 121.0
-margin_right = 348.0
-margin_bottom = 135.0
+margin_right = 500.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 400, 300 )
 text = "ESTE é um artefato muiro interessante."
-align = 1
 valign = 1
+autowrap = true
 
 [node name="ButtonContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 477.0
+margin_top = 499.0
 margin_right = 1024.0
-margin_bottom = 577.0
+margin_bottom = 599.0
 custom_constants/margin_right = 200
 custom_constants/margin_top = 20
 custom_constants/margin_left = 200

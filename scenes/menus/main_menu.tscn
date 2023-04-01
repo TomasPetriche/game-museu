@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/visuals/icon.png" type="Texture" id=1]
 [ext_resource path="res://scenes/menus/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://scenes/menus/credits_rich_label.gd" type="Script" id=3]
+[ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=4]
 
 [node name="MainMenu" type="Control" groups=["FreeOnChangeScene"]]
 anchor_right = 1.0
@@ -11,9 +12,17 @@ script = ExtResource( 2 )
 quit_path = NodePath("MarginContainer/Buttons/QuitButton")
 star_scene_id = "intro"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+color = Color( 0.69, 0.69, 0.69, 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.517647 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_left = 1.0
@@ -60,6 +69,7 @@ anchor_bottom = 1.0
 margin_right = -0.0640259
 
 [node name="TitleTextureRect" type="TextureRect" parent="TitleContainer"]
+visible = false
 margin_left = 172.0
 margin_top = 172.0
 margin_right = 428.0

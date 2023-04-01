@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/gameplay/creature-sheet.png" type="Texture" id=2]
-[ext_resource path="res://assets/visuals/artefacts/artefato_010.png" type="Texture" id=3]
+[ext_resource path="res://assets/visuals/artefacts/artefato_008.png" type="Texture" id=3]
 [ext_resource path="res://assets/visuals/gameplay/ventos-do-tempo.png" type="Texture" id=4]
+[ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Auto Walk"
@@ -109,6 +110,18 @@ anchor_bottom = 1.0
 [node name="PanelContainer" type="PanelContainer" parent="IntroLayer/FullScreen"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="PanelColor" type="ColorRect" parent="IntroLayer/FullScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.3312, 0.36, 0.34944, 1 )
+
+[node name="BackgroundTexture" type="TextureRect" parent="IntroLayer/FullScreen"]
+self_modulate = Color( 1, 1, 1, 0.0509804 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+stretch_mode = 5
 
 [node name="TitleContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
 margin_left = 7.0

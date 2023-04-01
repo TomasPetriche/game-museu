@@ -1,12 +1,12 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/artefact_data/artefact_data.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=2]
-[ext_resource path="res://assets/visuals/artefacts/artefato_009.png" type="Texture" id=3]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato_09.png" type="Texture" id=3]
 
 [resource]
 script = ExtResource( 1 )
-name_info = "NAME_TEST"
-text_info = "TEXT_DESCRIPTION"
+name_info = "Instrumentos (Atabaque, Bumbo e Acordeon)"
+text_info = "O atabaque é um instrumento de origem afro-brasileira. Esse exemplar foi doado pelos capoeiristas que se reuniram no Museu da Cidade em 2006. O bumbo faz parte de um conjunto de instrumentos musicais populares que pertenceu a Banda do Boi, banda de orientação carnavalesca. O acordeon, ou sanfona, é um instrumento portátil que possui dois teclados ligados por um fole. Os três instrumentos representam a pluralidade da música na cidade Campinas, respectivamente a música negra, a carnavalesca, e a de imigrantes alemães e italianos."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/artefact_data/artefact_data.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=2]
 [ext_resource path="res://assets/visuals/artefacts/artefato_005.png" type="Texture" id=3]
 
 [resource]
 script = ExtResource( 1 )
-name_info = "NAME_TEST"
-text_info = "TEXT_DESCRIPTION"
+name_info = "Chocalhos e flautas"
+text_info = "Os chocalhos e flautas são instrumentos musicais muito utilizados por diversos grupos indígenas, mas podemos perceber que há diferenças no formato, tamanho, material que foram produzidos. Alguns utilizam o grafismo nos chocalhos, outros não. As flautas são bem diferentes entre si, temos as flautas verticais dos povos Guarani e as flautas nasais dos povos Nhambiquara."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/artefact_data/artefact_data.gd" type="Script" id=1]
-[ext_resource path="res://assets/visuals/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=2]
 [ext_resource path="res://assets/visuals/artefacts/artefato_003.png" type="Texture" id=3]
 
 [resource]
 script = ExtResource( 1 )
-name_info = "NAME_TEST"
-text_info = "TEXT_DESCRIPTION"
+name_info = "Cerâmica industrial"
+text_info = "Essa cerâmica, produzida por uma sociedade urbana e industrializada, é um importante artefato para a Arqueologia. Ela destaca a relevância do estudo dos vestígios materiais para entender a sociedade em que vivemos, especialmente os fluxos comerciais e a ocidentalização no Brasil. Analisar a circulação desses objetos ajuda a compreender a economia, sociedade, valores e estética da época. A localização da cerâmica indica a finalidade anterior do local e diferencia o uso doméstico das peças estrangeiras."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

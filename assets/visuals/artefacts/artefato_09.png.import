@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/artefato_011.png-78db2cc753978a43d5adcd9b6aa65399.stex"
+path="res://.import/artefato_09.png-44a5f7cdba80028bcc69cfc13d8e8a24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visuals/artefacts/artefato_011.png"
-dest_files=[ "res://.import/artefato_011.png-78db2cc753978a43d5adcd9b6aa65399.stex" ]
+source_file="res://assets/visuals/artefacts/artefato_09.png"
+dest_files=[ "res://.import/artefato_09.png-44a5f7cdba80028bcc69cfc13d8e8a24.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
