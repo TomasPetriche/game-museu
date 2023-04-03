@@ -6,4 +6,4 @@ func _ready():
 	pass
 
 func meta_clicked(meta):
-    var _err = OS.shell_open(str(meta))
+	var _err = OS.shell_open(str(meta))

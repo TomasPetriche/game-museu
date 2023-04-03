@@ -1,6 +1,10 @@
 extends Node
 class_name Main
 
+
+export (bool) var include_disclaimer_version : bool = false
+
+
 export (Dictionary) var scenes : Dictionary
 var _current_scene : String = ""
 
@@ -19,7 +23,10 @@ func _ready():
 
 # Start App
 func _start_app():
-	go_to_scene("MainMenu")
+	if include_disclaimer_version or OS.has_feature("presentation"):
+		go_to_scene("disclaimer")
+	else:
+		go_to_scene("MainMenu")
 	pass
 
 func go_to_scene(scene_id : String):
@@ -36,7 +43,7 @@ func go_to_scene(scene_id : String):
 
 func restart_scene():
 	get_tree().call_group("FreeOnChangeScene", "queue_free")
-	var new_instance := scenes[_current_scene] as Node
+	var new_instance := scenes[_current_scene].instance() as Node
 	add_child(new_instance)
 
 func quit_app():

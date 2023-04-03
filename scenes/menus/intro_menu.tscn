@@ -114,7 +114,7 @@ anchor_bottom = 1.0
 [node name="PanelColor" type="ColorRect" parent="IntroLayer/FullScreen"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.3312, 0.36, 0.34944, 1 )
+color = Color( 0.329412, 0.360784, 0.34902, 1 )
 
 [node name="BackgroundTexture" type="TextureRect" parent="IntroLayer/FullScreen"]
 self_modulate = Color( 1, 1, 1, 0.0509804 )
