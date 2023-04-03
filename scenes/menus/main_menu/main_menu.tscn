@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://resources/themes/theme_a.tres" type="Theme" id=1]
+[ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/menus/main_menu/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://scenes/menus/credits_rich_label.gd" type="Script" id=3]
 [ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=4]

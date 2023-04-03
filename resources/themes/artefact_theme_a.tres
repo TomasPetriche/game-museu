@@ -1,10 +1,13 @@
-[gd_resource type="Theme" load_steps=6 format=2]
+[gd_resource type="Theme" load_steps=7 format=2]
 
 [ext_resource path="res://resources/fonts/ui/basic_medium.tres" type="DynamicFont" id=1]
 [ext_resource path="res://resources/styles/button_normal_a.tres" type="StyleBox" id=2]
 [ext_resource path="res://resources/styles/button_hover_a.tres" type="StyleBox" id=3]
 [ext_resource path="res://resources/styles/button_focus_a.tres" type="StyleBox" id=4]
 [ext_resource path="res://resources/styles/button_pressed_a.tres" type="StyleBox" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.113725, 0.0980392, 0.0980392, 0.843137 )
 
 [resource]
 default_font = ExtResource( 1 )
@@ -14,4 +17,5 @@ Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = ExtResource( 2 )
 Button/styles/pressed = ExtResource( 5 )
 Label/fonts/font = ExtResource( 1 )
+Panel/styles/panel = SubResource( 1 )
 RichTextLabel/fonts/normal_font = ExtResource( 1 )

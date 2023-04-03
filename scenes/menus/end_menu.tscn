@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=2]
 [ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=3]
-[ext_resource path="res://resources/themes/theme_a.tres" type="Theme" id=4]
+[ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=4]
 [ext_resource path="res://resources/fonts/ui/basic_xlarge.tres" type="DynamicFont" id=5]
 
 [node name="EndMenu" type="Node2D" groups=["FreeOnChangeScene"]]

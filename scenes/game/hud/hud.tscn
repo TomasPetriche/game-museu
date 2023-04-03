@@ -28,6 +28,7 @@ align = 1
 valign = 1
 
 [node name="ArtefactPopup" parent="AllGameElements" instance=ExtResource( 2 )]
+visible = true
 
 [connection signal="about_to_show" from="AllGameElements/ArtefactPopup" to="." method="_pause"]
 [connection signal="about_to_show" from="AllGameElements/ArtefactPopup" to="AllGameElements/ObjectiveContainer" method="hide"]

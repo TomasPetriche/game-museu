@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://resources/styles/button_hover_a.tres" type="StyleBox" id=1]
+[ext_resource path="res://resources/styles/button_pressed_a.tres" type="StyleBox" id=2]
+[ext_resource path="res://resources/styles/button_normal_a.tres" type="StyleBox" id=3]
+[ext_resource path="res://resources/fonts/ui/basic_medium.tres" type="DynamicFont" id=4]
+[ext_resource path="res://resources/styles/button_focus_a.tres" type="StyleBox" id=5]
+
+[resource]
+default_font = ExtResource( 4 )
+Button/fonts/basic_medium = ExtResource( 4 )
+Button/styles/focus = ExtResource( 5 )
+Button/styles/hover = ExtResource( 1 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 2 )
+Label/fonts/font = ExtResource( 4 )
+RichTextLabel/fonts/normal_font = ExtResource( 4 )

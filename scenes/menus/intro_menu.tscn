@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/visuals/gameplay/ventos-do-tempo.png" type="Texture" id=4]
 [ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=5]
 [ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=6]
-[ext_resource path="res://resources/themes/theme_a.tres" type="Theme" id=7]
+[ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Auto Walk"
