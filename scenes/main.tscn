@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
-[ext_resource path="res://scenes/menus/main_menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/menus/main_menu/main_menu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/game/_debug/world_test0.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/levels/rooms/level_room3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/game/levels/_debug/level_test0.tscn" type="PackedScene" id=5]
@@ -13,6 +13,7 @@
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
+include_disclaimer_version = true
 scenes = {
 "MainMenu": ExtResource( 2 ),
 "disclaimer": ExtResource( 10 ),

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=2]
+[ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=3]
+[ext_resource path="res://resources/themes/theme_a.tres" type="Theme" id=4]
+[ext_resource path="res://resources/fonts/ui/basic_xlarge.tres" type="DynamicFont" id=5]
 
 [node name="EndMenu" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 1 )
@@ -11,10 +15,23 @@ star_scene_id = "MainMenu"
 [node name="FullScreen" type="Control" parent="IntroLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 
 [node name="PanelContainer" type="PanelContainer" parent="IntroLayer/FullScreen"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="PanelColor" type="ColorRect" parent="IntroLayer/FullScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.329412, 0.360784, 0.34902, 1 )
+
+[node name="BackgroundTexture" type="TextureRect" parent="IntroLayer/FullScreen"]
+self_modulate = Color( 1, 1, 1, 0.0509804 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
 margin_left = 7.0
@@ -26,9 +43,10 @@ custom_constants/margin_left = 100
 
 [node name="Label" type="Label" parent="IntroLayer/FullScreen/MarginContainer"]
 margin_left = 100.0
-margin_top = 51.0
+margin_top = 32.0
 margin_right = 910.0
-margin_bottom = 65.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 5 )
 text = "VOCÊ COLETOU TODOS OS ARTEFATOS!"
 align = 1
 
@@ -42,17 +60,18 @@ custom_constants/margin_left = 100
 
 [node name="Label" type="Label" parent="IntroLayer/FullScreen/MarginContainer2"]
 margin_left = 100.0
-margin_top = 51.0
+margin_top = 37.0
 margin_right = 910.0
-margin_bottom = 65.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 3 )
 text = "OBRIGADO POR JOGAR! ;)"
 align = 1
 
 [node name="Control" type="CenterContainer" parent="IntroLayer/FullScreen"]
 margin_left = 7.0
-margin_top = 531.0
+margin_top = 512.0
 margin_right = 1017.0
-margin_bottom = 581.0
+margin_bottom = 562.0
 
 [node name="NextButton" type="Button" parent="IntroLayer/FullScreen/Control"]
 margin_left = 305.0
