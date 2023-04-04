@@ -75,9 +75,9 @@ valign = 1
 
 [node name="Control" type="CenterContainer" parent="IntroLayer/FullScreen"]
 margin_left = 7.0
-margin_top = 531.0
+margin_top = 512.0
 margin_right = 1017.0
-margin_bottom = 581.0
+margin_bottom = 562.0
 
 [node name="NextButton" type="Button" parent="IntroLayer/FullScreen/Control"]
 margin_left = 305.0
