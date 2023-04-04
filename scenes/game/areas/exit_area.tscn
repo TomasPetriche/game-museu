@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/game/areas/exit_area.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/placeholders/pattern-pack-pixel/Tiles (Grayscale)/tile_0031.png" type="Texture" id=2]
+[ext_resource path="res://scenes/game/areas/icon_tween.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -99,7 +100,6 @@ tracks/2/keys = {
 }
 
 [node name="ExitArea" type="Area2D" groups=["ExitArea"]]
-position = Vector2( 1440, 432 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
@@ -107,10 +107,17 @@ polygon = PoolVector2Array( -64, 0, 0, 32, 64, 0, 0, -32 )
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
-self_modulate = Color( 0.952941, 0.882353, 0.552941, 1 )
+self_modulate = Color( 0.937255, 0.235294, 0.141176, 0.788235 )
 position = Vector2( 0, -48 )
+rotation = -0.785398
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 2 )
+
+[node name="ArtefactTween" type="Tween" parent="Sprite"]
+script = ExtResource( 3 )
+active = false
+plus_offset = Vector2( 8, -8 )
+sprite_path = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "hiding"

@@ -24,6 +24,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/game/hud/artefact_popup.gd"
 }, {
+"base": "Area2D",
+"class": "ArtefactSelectable",
+"language": "GDScript",
+"path": "res://scenes/menus/gallery_menu/artefact_selectable/artefact_selectable.gd"
+}, {
+"base": "Node2D",
+"class": "ArtefactSelectionManager",
+"language": "GDScript",
+"path": "res://scenes/menus/gallery_menu/artefact_selection_manager.gd"
+}, {
 "base": "Tween",
 "class": "ArtefactTween",
 "language": "GDScript",
@@ -49,6 +59,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/game/hud/hud.gd"
 }, {
+"base": "Tween",
+"class": "IconTween",
+"language": "GDScript",
+"path": "res://scenes/game/areas/icon_tween.gd"
+}, {
 "base": "Node2D",
 "class": "Level",
 "language": "GDScript",
@@ -67,7 +82,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Menu",
 "language": "GDScript",
-"path": "res://scenes/menus/intro_menu.gd"
+"path": "res://scenes/menus/menu.gd"
 }, {
 "base": "AnimationPlayer",
 "class": "PlayerAnimation",
@@ -123,11 +138,14 @@ _global_script_class_icons={
 "ArtefactData": "",
 "ArtefactPickUp": "",
 "ArtefactPopup": "",
+"ArtefactSelectable": "",
+"ArtefactSelectionManager": "",
 "ArtefactTween": "",
 "DestroyParent": "",
 "ExitArea": "",
 "GameCamera": "",
 "HUD": "",
+"IconTween": "",
 "Level": "",
 "Main": "",
 "MainMenu": "",
@@ -148,7 +166,7 @@ _global_script_class_icons={
 
 config/name="Prototipo Jogo Museu"
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://assets/visuals/icon.png"
+config/icon="res://assets/visuals/artefacts/artefato_008.png"
 
 [display]
 

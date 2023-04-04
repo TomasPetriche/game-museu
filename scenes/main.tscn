@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/menus/main_menu/main_menu.tscn" type="PackedScene" id=2]
@@ -10,14 +10,15 @@
 [ext_resource path="res://scenes/menus/intro_menu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/menus/end_menu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/menus/disclaimer_menu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/menus/gallery_menu/gallery_menu.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
-include_disclaimer_version = true
 scenes = {
 "MainMenu": ExtResource( 2 ),
 "disclaimer": ExtResource( 10 ),
 "end": ExtResource( 9 ),
+"gallery": ExtResource( 11 ),
 "intro": ExtResource( 8 ),
 "level_test0": ExtResource( 5 ),
 "room1": ExtResource( 7 ),

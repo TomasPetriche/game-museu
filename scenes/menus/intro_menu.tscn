@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scenes/menus/intro_menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/menus/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/gameplay/creature-sheet.png" type="Texture" id=2]
 [ext_resource path="res://assets/visuals/artefacts/artefato_008.png" type="Texture" id=3]
 [ext_resource path="res://assets/visuals/gameplay/ventos-do-tempo.png" type="Texture" id=4]
@@ -101,7 +101,7 @@ step = 0.0333333
 
 [node name="IntroMenu" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 1 )
-star_scene_id = "room1"
+next_scene_id = "room1"
 
 [node name="IntroLayer" type="CanvasLayer" parent="."]
 
@@ -174,7 +174,7 @@ anims/auto_walk = SubResource( 2 )
 margin_top = 35.0
 margin_right = 312.0
 margin_bottom = 80.0
-text = "APERTE OS BOTÔES WASD 
+text = "APERTE OS BOTÕES WASD 
 PARA ANDAR"
 align = 1
 
@@ -207,7 +207,7 @@ margin_top = 35.0
 margin_right = 312.0
 margin_bottom = 80.0
 text = "COLETE OS
-ARTEFATOS!"
+ARTEFATOS"
 align = 1
 
 [node name="WindContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
@@ -241,7 +241,7 @@ anims/player_walk_right_down = SubResource( 7 )
 margin_top = 47.0
 margin_right = 312.0
 margin_bottom = 68.0
-text = "EVITE OS VENTOS DO TEMPO!"
+text = "EVITE OS VENTOS DO TEMPO"
 align = 1
 
 [node name="Button" type="CenterContainer" parent="IntroLayer/FullScreen"]

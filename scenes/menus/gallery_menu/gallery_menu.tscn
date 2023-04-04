@@ -1,0 +1,124 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/menus/menu.gd" type="Script" id=1]
+[ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=2]
+[ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=3]
+[ext_resource path="res://resources/fonts/ui/basic_medium.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/menus/gallery_menu/artefact_selectable/artefact_selectable.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/artefact_data/ad_room1_a.tres" type="Resource" id=6]
+[ext_resource path="res://resources/artefact_data/ad_room2_a.tres" type="Resource" id=7]
+[ext_resource path="res://resources/artefact_data/ad_room2_b.tres" type="Resource" id=8]
+[ext_resource path="res://resources/artefact_data/ad_room3_c.tres" type="Resource" id=9]
+[ext_resource path="res://resources/artefact_data/ad_room1_b.tres" type="Resource" id=10]
+[ext_resource path="res://resources/artefact_data/ad_room2_c.tres" type="Resource" id=11]
+[ext_resource path="res://resources/artefact_data/ad_room1_c.tres" type="Resource" id=12]
+[ext_resource path="res://resources/artefact_data/ad_room3_a.tres" type="Resource" id=13]
+[ext_resource path="res://resources/artefact_data/ad_room3_b.tres" type="Resource" id=14]
+[ext_resource path="res://scenes/menus/gallery_menu/artefact_selection_manager.gd" type="Script" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.109804, 0.121569, 0.141176, 1 )
+
+[node name="GalleryMenu" type="Node2D" groups=["FreeOnChangeScene"]]
+script = ExtResource( 1 )
+next_scene_id = "end"
+
+[node name="BackLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="PanelContainer" type="PanelContainer" parent="BackLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="IntroLayer" type="CanvasLayer" parent="."]
+
+[node name="FullScreen" type="Control" parent="IntroLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="IntroLayer/FullScreen"]
+margin_left = 100.0
+margin_top = 56.0
+margin_right = 924.0
+margin_bottom = 97.0
+custom_fonts/font = ExtResource( 3 )
+text = "MONTE SUA GALERIA"
+align = 1
+
+[node name="InstructionsLabel" type="Label" parent="IntroLayer/FullScreen"]
+margin_left = 58.0
+margin_top = 128.0
+margin_right = 966.0
+margin_bottom = 190.0
+custom_constants/line_spacing = 20
+custom_fonts/font = ExtResource( 4 )
+text = "ESCOLHA 3 ARTEFATOS PARA SUA EXPOSIÇÃO
+"
+align = 1
+valign = 1
+
+[node name="NextButton" type="Button" parent="IntroLayer/FullScreen"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -150.0
+margin_top = 496.0
+margin_right = 150.0
+margin_bottom = 546.0
+text = "PRONTO"
+
+[node name="GalleryNode" type="Node2D" parent="."]
+
+[node name="ArtefactSelectionManager" type="Node2D" parent="GalleryNode"]
+script = ExtResource( 15 )
+
+[node name="ArtefactSelectable0" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 256, 384 )
+artefact_data = ExtResource( 6 )
+
+[node name="ArtefactSelectable1" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 320, 256 )
+artefact_data = ExtResource( 10 )
+
+[node name="ArtefactSelectable2" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 448, 256 )
+artefact_data = ExtResource( 12 )
+
+[node name="ArtefactSelectable3" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 576, 256 )
+artefact_data = ExtResource( 7 )
+
+[node name="ArtefactSelectable4" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 704, 256 )
+artefact_data = ExtResource( 8 )
+
+[node name="ArtefactSelectable5" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 768, 384 )
+artefact_data = ExtResource( 11 )
+
+[node name="ArtefactSelectable6" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 384, 384 )
+artefact_data = ExtResource( 13 )
+
+[node name="ArtefactSelectable7" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 512, 384 )
+artefact_data = ExtResource( 14 )
+
+[node name="ArtefactSelectable8" parent="GalleryNode/ArtefactSelectionManager" instance=ExtResource( 5 )]
+position = Vector2( 640, 384 )
+artefact_data = ExtResource( 9 )
+
+[connection signal="button_down" from="IntroLayer/FullScreen/NextButton" to="." method="_next"]
+[connection signal="selection_not_ready" from="GalleryNode/ArtefactSelectionManager" to="IntroLayer/FullScreen/NextButton" method="hide" flags=3]
+[connection signal="selection_ready" from="GalleryNode/ArtefactSelectionManager" to="IntroLayer/FullScreen/NextButton" method="show" flags=3]
