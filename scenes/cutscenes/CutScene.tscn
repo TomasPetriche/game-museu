@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/themes/hud_theme_a.tres" type="Theme" id=1]
+[ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=2]
+
+[node name="CutScene" type="Node2D"]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="CutsceneElements" type="Control" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+
+[node name="ControlContainer" type="Control" parent="GUI/CutsceneElements"]
+margin_top = 424.0
+margin_right = 1024.0
+margin_bottom = 608.0
+
+[node name="Panel" type="Panel" parent="GUI/CutsceneElements/ControlContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 32.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DialogLabel" type="Label" parent="GUI/CutsceneElements/ControlContainer"]
+anchor_left = 0.19
+anchor_top = 0.174
+anchor_right = 0.812
+anchor_bottom = 1.0
+margin_left = 0.439987
+margin_top = 20.984
+margin_right = -2.48804
+margin_bottom = -27.0
+text = "Esse texte serve como referencia e deve ser apagado durante o programa.
+Esse texte serve como referencia e deve ser apagado durante o programa.
+Esse texte serve como referencia e deve ser apagado durante o programa.
+Esse texte serve como referencia e deve ser apagado durante o programa."
+autowrap = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NameControl" type="Control" parent="GUI/CutsceneElements/ControlContainer"]
+anchor_top = -0.043
+anchor_right = 0.437
+margin_left = 192.0
+margin_top = -0.0879998
+margin_right = 0.511993
+margin_bottom = 32.0
+
+[node name="Panel" type="Panel" parent="GUI/CutsceneElements/ControlContainer/NameControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NameLabel" type="Label" parent="GUI/CutsceneElements/ControlContainer/NameControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_right = -8.0
+text = "nome do personagem"
+autowrap = true
+uppercase = true
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="PanelColor" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.329412, 0.360784, 0.34902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackgroundTexture" type="TextureRect" parent="Background"]
+self_modulate = Color( 1, 1, 1, 0.0509804 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true
+}
