@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/themes/hud_theme_a.tres" type="Theme" id=1]
 [ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=2]
+[ext_resource path="res://scenes/cutscenes/cutscene.gd" type="Script" id=3]
 
 [node name="CutScene" type="Node2D"]
+script = ExtResource( 3 )
+next_button_path = NodePath("GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer/NextButton")
+back_button_path = NodePath("GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer/BackButton")
+dialog_label_path = NodePath("GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer/DialogLabel")
+name_label_path = NodePath("GUI/CutsceneElements/ControlContainer/NameControl/NameLabel")
 
 [node name="GUI" type="CanvasLayer" parent="."]
 layer = 10
@@ -19,38 +25,60 @@ margin_right = 1024.0
 margin_bottom = 608.0
 
 [node name="Panel" type="Panel" parent="GUI/CutsceneElements/ControlContainer"]
+anchor_top = 0.174
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 32.0
-__meta__ = {
-"_edit_lock_": true
-}
+margin_top = -0.0160027
 
-[node name="DialogLabel" type="Label" parent="GUI/CutsceneElements/ControlContainer"]
-anchor_left = 0.19
-anchor_top = 0.174
-anchor_right = 0.812
-anchor_bottom = 1.0
-margin_left = 0.439987
-margin_top = 20.984
-margin_right = -2.48804
-margin_bottom = -27.0
+[node name="MarginContainer" type="MarginContainer" parent="GUI/CutsceneElements/ControlContainer"]
+margin_top = 32.0
+margin_right = 1024.0
+margin_bottom = 184.0
+custom_constants/margin_right = 40
+custom_constants/margin_top = 20
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 20
+
+[node name="ControlContainer" type="HBoxContainer" parent="GUI/CutsceneElements/ControlContainer/MarginContainer"]
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 984.0
+margin_bottom = 132.0
+custom_constants/separation = 40
+alignment = 1
+
+[node name="BackButton" type="Button" parent="GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer"]
+margin_right = 144.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+text = "BACK"
+
+[node name="DialogLabel" type="Label" parent="GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer"]
+margin_left = 184.0
+margin_top = 9.0
+margin_right = 759.0
+margin_bottom = 102.0
 text = "Esse texte serve como referencia e deve ser apagado durante o programa.
 Esse texte serve como referencia e deve ser apagado durante o programa.
 Esse texte serve como referencia e deve ser apagado durante o programa.
 Esse texte serve como referencia e deve ser apagado durante o programa."
-autowrap = true
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="NextButton" type="Button" parent="GUI/CutsceneElements/ControlContainer/MarginContainer/ControlContainer"]
+margin_left = 799.0
+margin_right = 944.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+text = "NEXT"
 
 [node name="NameControl" type="Control" parent="GUI/CutsceneElements/ControlContainer"]
+anchor_left = 0.187
 anchor_top = -0.043
 anchor_right = 0.437
-margin_left = 192.0
+anchor_bottom = 0.174
+margin_left = 0.511993
 margin_top = -0.0879998
 margin_right = 0.511993
-margin_bottom = 32.0
+margin_bottom = -0.0160027
 
 [node name="Panel" type="Panel" parent="GUI/CutsceneElements/ControlContainer/NameControl"]
 anchor_right = 1.0
