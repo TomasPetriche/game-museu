@@ -1,22 +1,20 @@
 
 #ToDo
+
+- Enwmy new Walk Mode
+- Dialog UI - Level Start
+- Cutscene Screen
+
+
+
+#Completed
+
 - Realizar Protótipo
 
 	- Main
 		- Trocar de cena
-		- Tocar Musica
 		- Iniciar Nivel
 
-	- Inimigos
-		- Movimento
-		- Colisão e Interação
-
-	- LevelManager
-		- Winnig consitions
-		- Next Level
-
-
-#Completed
 - Fazer revisão com Petri
 - Criar branch petriche
 
@@ -30,7 +28,18 @@
 - Itens Coletaveis
 	- Emitir sinais
 
-#Hold
+	- Inimigos
+		- Movimento
+		- Colisão e Interação
 
+	- LevelManager
+		- Winnig consitions
+		- Next Level
+
+#Hold
+- Realizar Protótipo
+
+	- Main
+		- Tocar Musica
 
 #Canceled
