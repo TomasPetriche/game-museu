@@ -67,7 +67,7 @@ position = Vector2( 1248, 464 )
 artefact_data = ExtResource( 8 )
 
 [node name="ArtefactPickUp3" parent="YSort" index="8" instance=ExtResource( 2 )]
-position = Vector2( 608, 704 )
+position = Vector2( 608, 720 )
 artefact_data = ExtResource( 9 )
 
 [node name="ExitArea" parent="YSort" index="9" instance=ExtResource( 6 )]

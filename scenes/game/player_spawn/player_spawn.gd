@@ -14,6 +14,10 @@ func _ready():
 	_spawn_player()
 	pass
 
+func _set_position(_global_position : Vector2):
+	self.global_position = _global_position
+	pass
+
 func _spawn_player():
 	if skip_animation:
 		call_deferred("_set_player_on_scene")

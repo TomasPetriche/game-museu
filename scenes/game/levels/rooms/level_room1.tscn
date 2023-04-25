@@ -23,7 +23,7 @@ tile_data = PoolIntArray( -196598, 0, 0, -196597, 1, 0, -196596, 0, 0, -196595, 
 position = Vector2( 736, 528 )
 
 [node name="GameCamera" parent="YSort" index="1"]
-position = Vector2( 928, 368 )
+position = Vector2( 832, 392 )
 zoom = Vector2( 1.5, 1.5 )
 
 [node name="WallTileMap" parent="YSort" index="2"]
