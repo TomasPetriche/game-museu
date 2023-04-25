@@ -1,5 +1,5 @@
 extends Area2D
-class_name ResetEnemy
+class_name ResetTweenEnemy
 
 const RESTART_DELAY = 1
 

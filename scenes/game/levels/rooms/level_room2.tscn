@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/game/levels/_debug/_debug_ui_level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=5]
 [ext_resource path="res://scenes/game/areas/exit_area.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/game/enemies/reset_enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/game/enemies/reset_tween_enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://resources/artefact_data/ad_room2_b.tres" type="Resource" id=8]
 [ext_resource path="res://resources/artefact_data/ad_room2_c.tres" type="Resource" id=9]
 

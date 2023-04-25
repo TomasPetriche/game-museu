@@ -120,9 +120,9 @@ _global_script_classes=[ {
 "path": "res://scenes/game/enemies/pusher_enemy.gd"
 }, {
 "base": "Area2D",
-"class": "ResetEnemy",
+"class": "ResetTweenEnemy",
 "language": "GDScript",
-"path": "res://scenes/game/enemies/reset_enemy.gd"
+"path": "res://scenes/game/enemies/reset_tween_enemy.gd"
 }, {
 "base": "Node2D",
 "class": "SnapScreenBordersGizmo",
@@ -157,7 +157,7 @@ _global_script_class_icons={
 "PlayerMovement": "",
 "PlayerSpawn": "",
 "PusherEnemy": "",
-"ResetEnemy": "",
+"ResetTweenEnemy": "",
 "SnapScreenBordersGizmo": "",
 "TileMapFiller": ""
 }
