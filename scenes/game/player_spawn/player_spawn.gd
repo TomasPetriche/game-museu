@@ -10,9 +10,6 @@ signal player_ready (player_instance)
 export (PackedScene) var player_packed : PackedScene
 export (bool) var skip_animation := false
 
-func _ready():
-	_spawn_player()
-	pass
 
 func _set_position(_global_position : Vector2):
 	self.global_position = _global_position

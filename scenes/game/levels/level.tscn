@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
 [ext_resource path="res://scenes/game/player_spawn/player_spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/dialog_layer/dialog_layer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/game/hud/hud.tscn" type="PackedScene" id=7]
 
 [node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
@@ -45,3 +46,7 @@ layer = -10
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.56, 0.7, 0.651, 1 )
+
+[node name="DialogLayer" parent="." instance=ExtResource( 5 )]
+
+[connection signal="dialog_completed" from="DialogLayer" to="YSort/PlayerSpawn" method="_spawn_player"]
