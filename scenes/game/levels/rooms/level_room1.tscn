@@ -12,7 +12,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 320, -184 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, -136 )
 }
 
 [node name="LevelRoom1" instance=ExtResource( 1 )]
@@ -31,6 +31,7 @@ curve = SubResource( 1 )
 
 [node name="EnemyPosition0" type="PathFollow2D" parent="EnemyPath0" index="0"]
 rotation = -0.521834
+loop = false
 
 [node name="PlayerSpawn" parent="YSort" index="0"]
 position = Vector2( 736, 528 )
@@ -58,6 +59,7 @@ tile_data = PoolIntArray( 458766, 0, 0 )
 
 [node name="ResetPathEnemy" parent="YSort" index="4" instance=ExtResource( 9 )]
 position = Vector2( 928, 648 )
+follow_point_path = NodePath("../../EnemyPath0/EnemyPosition0")
 
 [node name="ArtefactPickUp1" parent="YSort" index="5" instance=ExtResource( 2 )]
 position = Vector2( 800, 240 )

@@ -5,7 +5,7 @@ const RESTART_DELAY = 1
 
 export (NodePath) var follow_point_path : NodePath = ""
 var follow_point : PathFollow2D = null
-export (float) var move_speed := 1.0
+export (float) var move_speed := 128.0
 
 onready var sprite_offset_tween := [Vector2(0, -12), Vector2(0, -16)].duplicate(true)
 var anim_time := 0.65
@@ -21,7 +21,14 @@ func _ready():
 	_err = $AnimTween.connect("tween_all_completed", self, "_new_anim")
 	_new_anim()
 	pass
-	
+
+func _physics_process(delta):
+	if follow_point:
+		self.global_position = follow_point.global_position
+		follow_point.offset += move_speed * delta
+		if follow_point.unit_offset == 0.0 or follow_point.unit_offset >= 1.0:
+			move_speed *= -1
+	pass
 
 
 func _new_anim():
