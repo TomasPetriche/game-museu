@@ -5,6 +5,8 @@ const RESTART_DELAY = 1
 
 export (NodePath) var follow_point_path : NodePath = ""
 var follow_point : PathFollow2D = null
+
+export (bool) var ping_poing_move : bool = true
 export (float) var move_speed := 128.0
 
 onready var sprite_offset_tween := [Vector2(0, -12), Vector2(0, -16)].duplicate(true)
@@ -15,6 +17,8 @@ const move_tile_size = Vector2(64, 32)
 func _ready():
 	if not follow_point_path == "":
 		follow_point = get_node(follow_point_path)
+		follow_point.loop = not ping_poing_move
+		
 	
 	var _err = null
 	_err = self.connect("body_entered", self, "_check_body")
@@ -26,7 +30,7 @@ func _physics_process(delta):
 	if follow_point:
 		self.global_position = follow_point.global_position
 		follow_point.offset += move_speed * delta
-		if follow_point.unit_offset == 0.0 or follow_point.unit_offset >= 1.0:
+		if ping_poing_move and (follow_point.unit_offset == 0.0 or follow_point.unit_offset >= 1.0):
 			move_speed *= -1
 	pass
 
