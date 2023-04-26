@@ -17,7 +17,7 @@ const move_tile_size = Vector2(64, 32)
 func _ready():
 	if not follow_point_path == "":
 		follow_point = get_node(follow_point_path)
-		follow_point.loop = not ping_poing_move
+		follow_point.loop = ping_poing_move
 		
 	
 	var _err = null
