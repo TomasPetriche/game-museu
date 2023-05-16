@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Instruções_pag_game.png-23f2d12859299979a0be40f3a343f8d2.stex"
+path="res://.import/seta_1.png-1ca2490b9dfcd48090a87ee7288d6659.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visuals/ui/Instruções_pag_game.png"
-dest_files=[ "res://.import/Instruções_pag_game.png-23f2d12859299979a0be40f3a343f8d2.stex" ]
+source_file="res://assets/visuals/ui/seta_1.png"
+dest_files=[ "res://.import/seta_1.png-1ca2490b9dfcd48090a87ee7288d6659.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

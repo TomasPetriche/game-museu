@@ -17,6 +17,7 @@ func _input(_event):
 		if Input.is_action_just_pressed("ui_accept"):
 			_new_line()
 
+
 func _new_line():
 	current_line_index += 1
 	if current_line_index >= dialog_data.size():
@@ -27,6 +28,7 @@ func _new_line():
 	
 	$"%IconTexture".texture = current_line_data.character_texture
 	$"%DialogLabel".text = current_line_data.text_line
+	$"%NameLabel".text = current_line_data.name_line
 
 func _end():
 	emit_signal("dialog_completed")

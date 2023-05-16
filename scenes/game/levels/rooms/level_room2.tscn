@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/game/levels/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/game/artefact/artefact_pick_up.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scenes/game/enemies/reset_tween_enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://resources/artefact_data/ad_room2_b.tres" type="Resource" id=8]
 [ext_resource path="res://resources/artefact_data/ad_room2_c.tres" type="Resource" id=9]
+[ext_resource path="res://resources/dialog_data/lines/room_1/line_r2_002.tres" type="Resource" id=10]
+[ext_resource path="res://resources/dialog_data/lines/room_1/line_r2_001.tres" type="Resource" id=11]
 
 [node name="LevelRoom2" instance=ExtResource( 1 )]
 next_level_id = "room3"
@@ -78,6 +80,9 @@ position = Vector2( 192, 576 )
 
 [node name="DebugUILevel" parent="HUD" index="1" instance=ExtResource( 4 )]
 camera_path = NodePath("../../YSort/GameCamera")
+
+[node name="DialogLayer" parent="." index="4"]
+dialog_data = [ ExtResource( 11 ), ExtResource( 10 ) ]
 
 [connection signal="all_artefacts_collected" from="." to="YSort/DoorTileMap" method="queue_free"]
 [connection signal="player_exited_level" from="YSort/ExitArea" to="." method="_go_to_next_level" flags=3]

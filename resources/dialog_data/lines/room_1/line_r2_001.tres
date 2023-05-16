@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_texture = ExtResource( 2 )
-name_line = "CACO"
-text_line = "Ache os objetos perdidos nessa sala e traga-os para mim. Mas CUIDADO! Os Ventos do Tempo continuam por aí, então é preciso ter precaução para não ser atingidos por eles."
+name_line = ""
+text_line = "Agora, nesta etapa, estamos na sala dos artefatos indígenas. Aqui podemos aprender sobre a pluralidade dos povos originários da região onde hoje é o Brasil. "

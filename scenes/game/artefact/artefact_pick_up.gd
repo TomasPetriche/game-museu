@@ -9,9 +9,6 @@ export (Resource) var artefact_data
 
 func _ready():
 	var _err = connect("body_entered", self, "_check_pick_up")
-	if artefact_data:
-		artefact_data = artefact_data as ArtefactData
-		$Sprite.texture = artefact_data.sprite_texture
 	pass
 
 func _check_pick_up(body:Node):

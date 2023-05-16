@@ -6,4 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_texture = ExtResource( 2 )
-text_line = "Hello Baby!"
+name_line = ""
+text_line = "Essa é a sala de arqueologia. Aqui estão os objetos que nos ajudam a entender mais sobre como os humanos viveram e vivem até hoje."

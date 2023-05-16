@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao selecao.png-c26065ba5a7e39cc7114ae055bb48460.stex"
+path="res://.import/background_cutscene.png-16a9f4ed158834c53491990dec5c5d83.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visuals/ui/botao selecao.png"
-dest_files=[ "res://.import/botao selecao.png-c26065ba5a7e39cc7114ae055bb48460.stex" ]
+source_file="res://assets/visuals/ui/background_cutscene.png"
+dest_files=[ "res://.import/background_cutscene.png-16a9f4ed158834c53491990dec5c5d83.stex" ]
 
 [params]
 

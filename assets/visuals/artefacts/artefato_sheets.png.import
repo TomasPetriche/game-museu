@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/seta 2.png-bd48b9d37f9d7bebef38fc8056a2fa35.stex"
+path="res://.import/artefato_sheets.png-eddf721de10207a856d5cd23ce0d8e26.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visuals/ui/seta 2.png"
-dest_files=[ "res://.import/seta 2.png-bd48b9d37f9d7bebef38fc8056a2fa35.stex" ]
+source_file="res://assets/visuals/artefacts/artefato_sheets.png"
+dest_files=[ "res://.import/artefato_sheets.png-eddf721de10207a856d5cd23ce0d8e26.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
