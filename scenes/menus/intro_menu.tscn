@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/menus/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/visuals/gameplay/creature-sheet.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/visuals/ui/background.png" type="Texture" id=5]
 [ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=6]
 [ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=7]
+[ext_resource path="res://assets/visuals/ui/intro_menu.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Auto Walk"
@@ -126,7 +127,18 @@ anchor_bottom = 1.0
 texture = ExtResource( 5 )
 stretch_mode = 5
 
+[node name="PanelTexture" type="TextureRect" parent="IntroLayer/FullScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = -25.0
+margin_right = -203.0
+margin_bottom = -128.0
+texture = ExtResource( 8 )
+expand = true
+
 [node name="TitleContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
+visible = false
 margin_left = 7.0
 margin_top = 36.0
 margin_right = 1017.0
@@ -144,10 +156,10 @@ text = "OS VENTOS DO TEMPO INVADIRAM O NOSSO MUSEU!"
 align = 1
 
 [node name="WalkContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
-margin_left = 11.0
-margin_top = 312.0
-margin_right = 523.0
-margin_bottom = 428.0
+margin_left = 151.0
+margin_top = 274.0
+margin_right = 663.0
+margin_bottom = 390.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
@@ -179,6 +191,7 @@ PARA ANDAR"
 align = 1
 
 [node name="ArrowContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
+visible = false
 margin_left = 256.0
 margin_top = 312.0
 margin_right = 768.0
@@ -211,10 +224,10 @@ ARTEFATOS"
 align = 1
 
 [node name="WindContainer" type="MarginContainer" parent="IntroLayer/FullScreen"]
-margin_left = 496.0
-margin_top = 312.0
-margin_right = 1008.0
-margin_bottom = 428.0
+margin_left = 373.0
+margin_top = 274.0
+margin_right = 885.0
+margin_bottom = 390.0
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 
@@ -238,10 +251,11 @@ anims/float = SubResource( 6 )
 anims/player_walk_right_down = SubResource( 7 )
 
 [node name="Label" type="Label" parent="IntroLayer/FullScreen/WindContainer/VBoxContainer"]
-margin_top = 47.0
+margin_top = 35.0
 margin_right = 312.0
-margin_bottom = 68.0
-text = "EVITE OS VENTOS DO TEMPO"
+margin_bottom = 80.0
+text = "EVITE 
+OS VENTOS DO TEMPO"
 align = 1
 
 [node name="Button" type="CenterContainer" parent="IntroLayer/FullScreen"]

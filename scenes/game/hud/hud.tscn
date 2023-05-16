@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/game/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://scenes/game/hud/artefact_popup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/themes/hud_theme_a.tres" type="Theme" id=3]
 [ext_resource path="res://resources/fonts/ui/basic_outline_medium.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/visuals/artefacts/artefato.png" type="Texture" id=5]
+[ext_resource path="res://assets/visuals/ui/instrucoes_pag_game.png" type="Texture" id=6]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -17,15 +19,33 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="BackgroundTexture" type="TextureRect" parent="AllGameElements"]
+margin_left = -24.0
+margin_top = 16.0
+margin_right = 464.0
+margin_bottom = 240.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
 [node name="ObjectiveLabel" type="Label" parent="AllGameElements"]
-margin_left = 16.0
-margin_top = 8.0
-margin_right = 1026.0
-margin_bottom = 68.0
+margin_left = 88.0
+margin_top = 40.0
+margin_right = 1098.0
+margin_bottom = 100.0
 custom_constants/line_spacing = -2
 custom_fonts/font = ExtResource( 4 )
 text = "Colete os artefatos!
 Artefatos Coletados : X / X"
+
+[node name="ArtefactIcon" type="TextureRect" parent="AllGameElements"]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 88.0
+margin_bottom = 104.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
 
 [node name="ArtefactPopup" parent="AllGameElements" instance=ExtResource( 2 )]
 visible = false
