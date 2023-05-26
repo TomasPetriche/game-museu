@@ -16,6 +16,7 @@
 script = ExtResource( 1 )
 scenes = {
 "MainMenu": ExtResource( 2 ),
+"cutscene_abertura": null,
 "disclaimer": ExtResource( 10 ),
 "end": ExtResource( 9 ),
 "gallery": ExtResource( 11 ),

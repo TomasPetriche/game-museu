@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Cocar"
-text_info = "Os cocares são utilizados apenas nas danças celebrativas e cerimoniais. Há uma grande variação na forma de produzi-los, mas os usos são semelhantes."
+text_info = "Esse cocar é da etnia Yawalapiti, localizada no Alto Xingú. Os cocares são utilizados apenas nas danças celebrativas e cerimoniais. Há uma grande variação na forma de produzi-los, mas os usos são semelhantes."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

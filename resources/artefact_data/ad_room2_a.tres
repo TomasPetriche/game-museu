@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Cestas"
-text_info = "O conjunto de cestarias foi produzido por diferentes grupos indígenas como Paressis, Xavante e Nhambiquara. Podemos perceber as diferenças das cestarias através do trançado e do grafismo que algumas trazem, mostrando na produção cultural a identidade de cada grupo. Ao mesmo tempo é possível perceber que os formatos e tamanhos diferentes estão relacionados aos usos: cesta para pesca, cesta para colheita da mandioca, cesta para carregar crianças, cesta para guarda de objetos."
+text_info = "As cestas indígenas são produzidas a partir de materiais naturais, como folhas de árvores diversas (dependendo da região habitada pelo povo indígena) e materiais como palha, junco e folhas de palmeiras. Em geral, as cestarias são produzidas por mulheres e desde as crianças aprendem desde cedo a realizar a trama da palha e produzir os cestos."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

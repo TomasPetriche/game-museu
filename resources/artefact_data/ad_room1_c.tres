@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Cerâmica industrial"
-text_info = "Essa cerâmica, produzida por uma sociedade urbana e industrializada, é um importante artefato para a Arqueologia. Ela destaca a relevância do estudo dos vestígios materiais para entender a sociedade em que vivemos, especialmente os fluxos comerciais e a ocidentalização no Brasil. Analisar a circulação desses objetos ajuda a compreender a economia, sociedade, valores e estética da época. A localização da cerâmica indica a finalidade anterior do local e diferencia o uso doméstico das peças estrangeiras."
+text_info = "Esse artefato pode ser estudado pela arqueologia urbana para compreender o início das cidades e o modo de vida dessas sociedades. Estes são fragmentos de um prato de modelo internacional (asiático/europeu) do final do século XIX e início do século XX, encontrado no centro histórico de Campinas, através de escavação arqueológica."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

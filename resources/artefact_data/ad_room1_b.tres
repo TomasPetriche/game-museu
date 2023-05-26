@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Crânio Sambaqui"
-text_info = "Este crânio humano feminino, encontrado em Santa Catarina, é proveniente da pré-história brasileira e pertenceu a um dos primeiros habitantes do país: os povos sambaquianos. Esses povos eram grupos diferentes que viviam no litoral e construíam amontoados de conchas, conhecidos como sambaquis, compostos também de restos mortais de animais, incluindo mamíferos terrestres, peixes, golfinhos e baleias. A pré-história brasileira, ao contrário da europeia, foi marcada pela existência de múltiplos grupos não necessitantes da escrita."
+text_info = "Provavelmente feminino, encontrado em um sambaqui de Santa Catarina. O sambaqui é formado por terra, areia, várias conchas e objetos descartados por sociedades litorâneas ou ribeirinhas da pré-história brasileira. É datado aproximadamente 6000 A.C até 800 D.C."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

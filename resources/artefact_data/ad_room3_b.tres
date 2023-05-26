@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Medalhão Carlos Gomes"
-text_info = "Molde em gesso para confecção da efígie de Carlos Gomes em 1936. Carlos Gomes nasceu em Campinas, filho de pai com descendência negra e mãe indígena. Não era bem acolhido por sua origem, mas sua atuação como músico sempre chamou atenção. Seus estudos foram financiados por Dom Pedro II. Estudou, viveu e realizou importante produção musical na Europa. Uma das suas principais obras é a ópera O Guarani, que inspirou o nome do time de futebol Guarani, de Campinas."
+text_info = "O maestro nascido em Campinas no ano de 1836 e falecido em Belém do Pará em 1896 é reconhecido como um dos maiores compositores de música erudita da América Latina."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

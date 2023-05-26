@@ -7,7 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Brasão"
-text_info = "Molde em Gesso do Brasão Original da Cidade de Campinas.
-Doado pelo senhor Ivo Papaiz em 2006, filho de Otaviano Papaiz, fundador da Marmoraria Papaiz. Estima-se que o mesmo tenha sido utilizado para confeccionar o brasão que está colocado na parede do Palácio dos Azulejos, situada na Rua Regente Feijó, prédio no qual funcionou a Prefeitura Municipal de Campinas de 1908 a 1968 quando ocorreu a inauguração do Palácio dos Jequitibás. A marmoraria ficou famosa por ter produzido mais de 250 réplicas do Cristo Redentor espalhadas pelo Brasil afora."
+text_info = "O Brasão é composto por uma imagem da fênix que representa Campinas renascendo da epidemia de febre amarela de 1889."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

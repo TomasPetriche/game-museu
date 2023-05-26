@@ -8,6 +8,6 @@
 script = ExtResource( 1 )
 name_info = "Instrumentos "
 text_info = "Atabaque, Bumbo e Acordeon
-O atabaque é um instrumento de origem afro-brasileira. Esse exemplar foi doado pelos capoeiristas que se reuniram no Museu da Cidade em 2006. O bumbo faz parte de um conjunto de instrumentos musicais populares que pertenceu a Banda do Boi, banda de orientação carnavalesca. O acordeon, ou sanfona, é um instrumento portátil que possui dois teclados ligados por um fole. Os três instrumentos representam a pluralidade da música na cidade Campinas, respectivamente a música negra, a carnavalesca, e a de imigrantes alemães e italianos."
+Instrumentos que apresentam a diversidade da cultura brasileira em desfiles de carnavais, músicas regionais e na capoeira, respectivamente."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )

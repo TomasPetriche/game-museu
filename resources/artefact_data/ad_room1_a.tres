@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource( 1 )
 name_info = "Machado Cerimonial"
-text_info = "Este objeto de pedra com uma forma bem moldada e polida é um dos tipos de machados ameríndios do início do Holoceno. Arqueólogos o consideram um artefato cerimonial. É chamado de lâmina semilunar ou em formato de âncora e pode ser encontrado em pinturas rupestres em Lagoa Santa, o sítio arqueológico mais antigo do Brasil, datado em mais de 12 mil anos atrás. O objeto é frágil para atividades de corte, mas tem alto valor simbólico e é comum na tradição Sapucaí, difundida em grande parte do Brasil Central."
+text_info = "Objeto das primeiras manifestações humanas do Brasil relacionado ao período da pré-história, datado aproximadamente de 12000 A.C até 8000 A.C."
 sprite_texture = ExtResource( 2 )
 icon_texture = ExtResource( 3 )
