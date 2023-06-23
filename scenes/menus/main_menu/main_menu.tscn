@@ -200,7 +200,7 @@ margin_top = 72.0
 margin_right = 958.0
 margin_bottom = 129.0
 custom_fonts/font = ExtResource( 7 )
-text = "Colaboradores"
+text = "Créditos"
 align = 2
 
 [node name="CreditsListLabel" type="Label" parent="CreditsPopUp"]
@@ -209,20 +209,33 @@ margin_top = 168.0
 margin_right = 957.0
 margin_bottom = 525.0
 custom_fonts/font = ExtResource( 5 )
-text = "	Artur Strauch - Arte Visual	
-	Tomás Petrichi - Programação
-	Tomás Xavier - Game Design
-	Ana Beatriz dos Santos - Design de Interfaces
-	Guilherme Curti Gomes 
-
-
-
-Agradecimentos para o Museu Municipal - Casa de Vidro﻿
-
-	Adriana Barão﻿ - Curadoria
+text = "Coordenação:
 	Profa. Dra. Jurema Luzia de Freitas Sampaio
 	Profa. Dra. Selma Machado Simão
-	Luíza Schilling Lopes - Argumento
+
+Argumento:
+	Luíza Schilling Lopes
+
+Museu da Cidade de Campinas - Casa de Vidro:
+	Adriana Barão
+	Américo Villela
+	Carlos Barrozo
+	Gustavo Barletta
+	Lilian Alvisi
+	Mauro Guari
+
+Desenvolvimento:
+
+	Bolsistas: 
+		Artur Strauch Pinto Dantas Cunha
+		Tomás Menconi Petriche
+		Tomás Xavier Carciofi
+
+	Estagiários:
+		Ana Beatriz dos Santos
+		Beatriz de Souza Lorenço Carlucci
+		Guilherme Curti Gomes
+		Sofia Helena Cardoso Rodrigues
 "
 align = 2
 
