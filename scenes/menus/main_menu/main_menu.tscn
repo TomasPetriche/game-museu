@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/menus/main_menu/main_menu.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=6]
 [ext_resource path="res://resources/fonts/ui/basic_xlarge.tres" type="DynamicFont" id=7]
 [ext_resource path="res://resources/fonts/ui/basic_small.tres" type="DynamicFont" id=8]
+[ext_resource path="res://assets/visuals/ui/credit_texture.png" type="Texture" id=9]
 
 [node name="MainMenu" type="Control" groups=["FreeOnChangeScene"]]
 anchor_right = 1.0
@@ -52,7 +53,7 @@ margin_top = 176.0
 margin_right = 608.0
 margin_bottom = 261.0
 custom_fonts/font = ExtResource( 7 )
-text = "Casa de Vidro"
+text = "Museu da Cidade"
 
 [node name="SubTitleLabel" type="Label" parent="MainContent/MarginTitlle"]
 margin_left = 50.0
@@ -258,6 +259,11 @@ margin_right = 148.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 128, 60 )
 text = "VOLTAR"
+
+[node name="TextureRect" type="TextureRect" parent="CreditsPopUp"]
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+stretch_mode = 5
 
 [node name="QuitPopup" type="Popup" parent="."]
 anchor_right = 1.0
