@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_texture = ExtResource( 2 )
-name_line = "CACO"
+name_line = "CACA"
 text_line = "Estamos quase acabando! Se não for muito incômodo, nossa sala Campinas também não foi perdoada pelos Ventos. "

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/themes/menu_theme_a.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/menus/main_menu/main_menu.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://resources/fonts/ui/basic_medium.tres" type="DynamicFont" id=5]
 [ext_resource path="res://resources/fonts/ui/basic_large.tres" type="DynamicFont" id=6]
 [ext_resource path="res://resources/fonts/ui/basic_xlarge.tres" type="DynamicFont" id=7]
+[ext_resource path="res://resources/fonts/ui/basic_small.tres" type="DynamicFont" id=8]
 
 [node name="MainMenu" type="Control" groups=["FreeOnChangeScene"]]
 anchor_right = 1.0
@@ -200,7 +201,7 @@ margin_top = 72.0
 margin_right = 958.0
 margin_bottom = 129.0
 custom_fonts/font = ExtResource( 7 )
-text = "Colaboradores"
+text = "Créditos"
 align = 2
 
 [node name="CreditsListLabel" type="Label" parent="CreditsPopUp"]
@@ -208,23 +209,37 @@ margin_left = 520.0
 margin_top = 168.0
 margin_right = 957.0
 margin_bottom = 525.0
-custom_fonts/font = ExtResource( 5 )
-text = "	Artur Strauch - Arte Visual	
-	Tomás Petrichi - Programação
-	Tomás Xavier - Game Design
-	Ana Beatriz dos Santos - Design de Interfaces
-	Guilherme Curti Gomes 
-
-
-
-Agradecimentos para o Museu Municipal - Casa de Vidro﻿
-
-	Adriana Barão﻿ - Curadoria
+custom_fonts/font = ExtResource( 8 )
+text = "Coordenação:
 	Profa. Dra. Jurema Luzia de Freitas Sampaio
 	Profa. Dra. Selma Machado Simão
-	Luíza Schilling Lopes - Argumento
+
+Argumento:
+	Luíza Schilling Lopes
+
+Museu da Cidade de Campinas - Casa de Vidro:
+	Adriana Barão
+	Américo Villela
+	Carlos Barrozo
+	Gustavo Barletta
+	Lilian Alvisi
+	Mauro Guari
+
+Desenvolvimento:
+
+	Bolsistas: 
+		Artur Strauch Pinto Dantas Cunha
+		Tomás Menconi Petriche
+		Tomás Xavier Carciofi
+
+	Estagiários:
+		Ana Beatriz dos Santos
+		Beatriz de Souza Lorenço Carlucci
+		Guilherme Curti Gomes
+		Sofia Helena Cardoso Rodrigues
 "
 align = 2
+autowrap = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CreditsPopUp"]
 anchor_top = 1.0
