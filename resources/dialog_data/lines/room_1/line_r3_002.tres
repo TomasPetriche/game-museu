@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_texture = ExtResource( 2 )
-name_line = "CACO"
+name_line = "CACA"
 text_line = "Nos ajude a encontrar um pouquinho da história da cidade onde nosso museu está localizado!"

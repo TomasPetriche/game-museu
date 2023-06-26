@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://resources/tilesets/tile_set_wall_ph1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/game/levels/level.gd" type="Script" id=2]
 [ext_resource path="res://scenes/game/player_spawn/player_spawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/game/tile_maps/floor_tile_map_ph.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/game/dialog_layer/dialog_layer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/visuals/ui/Arrow-Transparent-Background.png" type="Texture" id=6]
 [ext_resource path="res://scenes/game/hud/hud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/visuals/ui/Arrow-Transparent-Background - Copia.png" type="Texture" id=8]
+[ext_resource path="res://assets/visuals/ui/Arrow-Transparent-Background - Copia (2).png" type="Texture" id=9]
+[ext_resource path="res://assets/visuals/ui/Arrow-Transparent-Background - Copia (3).png" type="Texture" id=10]
+[ext_resource path="res://scenes/game/levels/buttons.gd" type="Script" id=11]
 
 [node name="Level" type="Node2D" groups=["FreeOnChangeScene"]]
 script = ExtResource( 2 )
@@ -49,4 +54,44 @@ color = Color( 0.56, 0.7, 0.651, 1 )
 
 [node name="DialogLayer" parent="." instance=ExtResource( 5 )]
 
+[node name="buttons" type="CanvasLayer" parent="."]
+script = ExtResource( 11 )
+
+[node name="bnt_right" type="TouchScreenButton" parent="buttons"]
+visible = false
+position = Vector2( 139, 407 )
+scale = Vector2( 0.070625, 0.071875 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 6 )
+action = "gp_right"
+visibility_mode = 1
+
+[node name="bnt_left" type="TouchScreenButton" parent="buttons"]
+visible = false
+position = Vector2( 1.78814e-06, 405 )
+scale = Vector2( 0.0675, 0.07125 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 8 )
+action = "gp_left"
+visibility_mode = 1
+
+[node name="bnt_up" type="TouchScreenButton" parent="buttons"]
+visible = false
+position = Vector2( 72, 345 )
+scale = Vector2( 0.0675, 0.07125 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 10 )
+action = "gp_up"
+visibility_mode = 1
+
+[node name="bnt_down" type="TouchScreenButton" parent="buttons"]
+visible = false
+position = Vector2( 70, 465 )
+scale = Vector2( 0.0675, 0.07125 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
+action = "gp_down"
+visibility_mode = 1
+
 [connection signal="dialog_completed" from="DialogLayer" to="YSort/PlayerSpawn" method="_spawn_player"]
+[connection signal="dialog_completed" from="DialogLayer" to="buttons" method="_on_DialogLayer_dialog_completed"]

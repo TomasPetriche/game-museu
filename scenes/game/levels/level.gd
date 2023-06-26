@@ -5,8 +5,9 @@ export (String) var next_level_id : String
 
 signal all_artefacts_collected
 
-
 func _ready():
+	
+	
 	var _err = null
 	for c in get_tree().get_nodes_in_group("ArtefactPickUp"):
 		c = c as ArtefactPickUp

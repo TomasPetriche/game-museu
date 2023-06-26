@@ -33,3 +33,4 @@ func _new_line():
 func _end():
 	emit_signal("dialog_completed")
 	hide()
+
