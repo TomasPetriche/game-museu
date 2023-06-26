@@ -3,6 +3,6 @@
 [ext_resource path="res://resources/fonts/source/basic/Basic-Regular.otf" type="DynamicFontData" id=1]
 
 [resource]
-size = 9
+size = 8
 extra_spacing_char = 1
 font_data = ExtResource( 1 )
